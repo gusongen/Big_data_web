@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据金融风控决策系统</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Front_End/main/css/main.css' %} ">
+    <script defer="defer" src="{% static "node_modules/jquery/dist/jquery.slim.js" %}"></script>
+    <script defer="defer" src="{% static "Front_End/reg/js/reg.js" %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body style="margin:0 auto">
+<div class="head">
+    <div class="headp1">
+        <img src="{% static 'Front_End/main/img/cqupt_ico.png' %}" alt="" id="cqupt_logo">
+        <img src="{% static 'Front_End/main/img/cqupt_word.png' %}" alt="" id="words">
+    </div>
+    <input type="text" name="searchbox" id="head_search_box">{# TODO 搜索 #}
+    <p id="headline">大数据金融风控决策系统V1.0</p>
+    <div id="zcAdr">
+        <div id="zhuce" class="btn" onclick="window.open({% url 'main:register' %} ,'_self')">
+            注册
+        </div>
+        <div id="dengru" class="btn" onclick="window.open({% url 'main:login' %} ,'_self')">
+            登入
+        </div>
+        <div id="daping" class="btn" onclick="window.open({% url 'main:dp' %} ,'_self')">
+            大屏
+        </div>
+    </div>
+</div>
+<div style="display:flex;height:calc(100% - 70px);">
+
+    <div id="operation_box">
+        {#        ###########################################################}
+        <ul id="operation_box_ul">
+            <li id="yhgl">
+                <div class="choice"><img src="{% static 'Front_End/main/img/logo1.png' %}" alt="">决策管理</div>
+                <ul class="choice_child_wrap">
+                    <li class="choice_child">决策分析</li>
+                    <li class="choice_child">决策统计</li>
+                    <li class="choice_child">决策数据</li>
+                </ul>
+            </li>
+            <li id="yhhx">
+                <div class="choice"><img src="{% static 'Front_End/main/img/logo2.png' %}" alt="">用户画像</div>
+                <ul class="choice_child_wrap">
+                    <li class="choice_child">数据概括</li>
+                    <li class="choice_child">数据分析</li>
+                    <li class="choice_child">实施预测</li>
+                    <li class="choice_child">用户分群</li>
+                </ul>
+            </li>
+
+            <li id="glt">
+                <div class="choice"><img src="{% static 'Front_End/main/img/logo3.png' %}" alt="">管理台</div>
+                <ul class="choice_child_wrap">
+                    <li class="choice_child">公务管理</li>
+                    <li class="choice_child">密码管理</li>
+                    <li class="choice_child">数据管理</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="logout">
+            <img src="{% static 'Front_End/main/img/logout.png' %}" alt="">
+            退出登录
+        </button>
+    </div>
+    {#        ###########################################################}
+    <!--        页面1-->
+    <div class="content" id="yhgl_page">
+        <!--            <div id="div1">-->
+        <!--&lt;!&ndash;                标题  &ndash;&gt;-->
+        <!--                <div class="head_of_div">-->
+        <!--                    <div class="line">-->
+
+        <!--                    </div>-->
+        <!--                    统计数据-->
+        <!--                </div>-->
+        <!--&lt;!&ndash;                end of 标题&ndash;&gt;-->
+        <!--&lt;!&ndash;                div内容&ndash;&gt;-->
+        <!--                <div class="content_of_div">-->
+        <!--                    <div id="fg1_1">-->
+
+        <!--                    </div>-->
+        <!--                    <div id="fg1_2">-->
+        <!--                        -->
+        <!--                    </div>-->
+        <!--                    <div id="fg1_3">-->
+        <!--                        -->
+        <!--                    </div>-->
+        <!--                    <div id="fg1_4">-->
+        <!--                        -->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <div id="div1">
+            <div class="ddiv" id="ddiv1">
+                <!--                标题  -->
+                <div class="head_of_div">
+                    <div class="line"></div>
+                    决策分析
+                </div>
+                <!--                end of 标题-->
+                <div class="content_showbox_wrap">
+                    <div class="content_showbox">
+                        <div>
+                            <div class="showbox_txt1"><span>可信用户数量</span></div>
+                            <div class="numAdw"><span class="showbox_txt2">20</span>
+                                <span class="showbox_txt3">户</span></div>
+                        </div>
+                    </div>
+                    <div class="btw_lin"></div>
+                    <div class="content_showbox">
+                        <div>
+                            <div class="showbox_txt1"><span>不可信用户数量</span></div>
+                            <div class="numAdw"><span class="showbox_txt2">10</span>
+                                <span class="showbox_txt3">户</span></div>
+                        </div>
+                    </div>
+                    <div class="btw_lin"></div>
+                    <div class="content_showbox">
+                        <div>
+                            <div class="showbox_txt1"><span>总信用户数量</span></div>
+                            <div class="numAdw"><span class="showbox_txt2">30</span>
+                                <span class="showbox_txt3">户</span></div>
+                        </div>
+                    </div>
+                    <div class="btw_lin"></div>
+                    <div class="content_showbox">
+                        <div>
+                            <div class="showbox_txt1"><span>贷款总金额</span></div>
+                            <div class="numAdw"><span class="showbox_txt2">123111,456</span>
+                                <span class="showbox_txt3">万元</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ddiv" id="ddiv2">
+                <!--                标题  -->
+                <div class="head_of_div">
+                    <div class="line"></div>
+                    决策统计
+                </div>
+                <!--                end of 标题-->
+                <div class="content_showbox_wrap">
+                    <div class="content_showbox2" id="fg3_1">
+                    </div>
+                    <div class="content_showbox2" id="fg3_2">
+                    </div>
+                    <div class="content_showbox2" id="fg3_3">
+
+                    </div>
+                    <div class="content_showbox2" id="fg3_4">
+
+                    </div>
+                </div>
+            </div>
+            <div class="ddiv" id="ddiv3">
+                <!--                标题  -->
+                <div class="head_of_div">
+                    <div class="line"></div>
+                    决策数据
+                    <div id="search_box">
+                        <label for="search_boxin"></label><input type="text" id="search_boxin" name="hhh"
+                                                                 placeholder="">
+                        {#                        <img src="{% static 'Front_End/main/img/search.png' %}" alt="" onclick="">#}
+                    </div>
+                </div>
+                <!--                end of 标题-->
+                <div class="content_showbox_wrap">
+                    <table style="width: 100%;height: 100%">
+                        <tr>
+                            <th>用户id</th>
+                            <th>性别</th>
+                            <th>货款日期</th>
+                            <th>还款日期</th>
+                            <th>货款金额</th>
+                            <th>信用额度</th>
+                            <th>信用评分</th>
+                        <tr>
+                            <td>张三</td>
+                            <td>男</td>
+                            <td>2019-10-30</td>
+                            <td>2020-10-30</td>
+                            <td>1,000,000</td>
+                            <td>1,000,000</td>
+                            <td>
+                                <ul class="rev_pro clearfix">
+                                    <li>
+
+
+                                        <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                            <span class="revgrade">良</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>男</td>
+                            <td>2019-10-30</td>
+                            <td>2020-10-30</td>
+                            <td>1,000,000</td>
+                            <td>1,000,000</td>
+                            <td>
+                                <ul class="rev_pro clearfix">
+                                    <li>
+                                        <div class="revinp">
+                                                    <span class="level">
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_hollow" cjmark=""></i>
+                                                    </span>
+                                            <span class="revgrade">良</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>男</td>
+                            <td>2019-10-30</td>
+                            <td>2020-10-30</td>
+                            <td>1,000,000</td>
+                            <td>1,000,000</td>
+                            <td>
+                                <ul class="rev_pro clearfix">
+                                    <li>
+
+
+                                        <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                            <span class="revgrade">良</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>男</td>
+                            <td>2019-10-30</td>
+                            <td>2020-10-30</td>
+                            <td>1,000,000</td>
+                            <td>1,000,000</td>
+                            <td>
+                                <ul class="rev_pro clearfix">
+                                    <li>
+
+
+                                        <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                            <span class="revgrade">良</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>男</td>
+                            <td>2019-10-30</td>
+                            <td>2020-10-30</td>
+                            <td>1,000,000</td>
+                            <td>1,000,000</td>
+                            <td>
+                                <ul class="rev_pro clearfix">
+                                    <li>
+
+
+                                        <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                            <span class="revgrade">良</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="div2">
+            <!--                标题  -->
+            <div class="head_of_div">
+                <div class="line"></div>
+                下载
+            </div>
+            <!--                end of 标题-->
+            <ul>
+                <li>用户借贷审批表1<a href="">下载</a>
+                </li>
+                <li>用户借贷审批表2<a href="">下载</a>
+                </li>
+                <li>用户借贷审批表3<a href="">下载</a>
+                </li>
+                <li>用户借贷审批表4<a href="">下载</a>
+                </li>
+                <li>用户借贷审批表5<a href="">下载</a>
+                </li>
+            </ul>
+        </div>
+        <div id="div3">
+            <!--                标题  -->
+            <div class="head_of_div">
+                <div class="line">
+
+                </div>
+                最新公告
+            </div>
+            <!--                end of 标题-->
+            <ul>
+                <li><p><b>[公告] </b>关于11月借贷须知</p><a href="">查看</a>
+                </li>
+                <li><p><b>[公告] </b>借贷审批流程详情</p><a href="">查看</a>
+                </li>
+                <li><p><b>[公告] </b>借贷审批流程详情</p><a href="">查看</a>
+                </li>
+                <li><p><b>[公告] </b>借贷审批流程详情</p><a href="">查看</a>
+                </li>
+                <li><p><b>[公告] </b>借贷审批流程详情</p><a href="">查看</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--        用户页面2-->
+    <div class="content" id="yhhx_page">
+        <div id="short_intro">
+            <div class="user_icon_wrap">
+                <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">
+            </div>
+            {#            <div class="details">#}
+            {#                <div class="indetails">#}
+            {#                    <p><span class="key">ID</span><span class="value">customer</span></p>#}
+            {#                    <p><span class="key">姓名</span><span class="value">customer</span></p>#}
+            {#                    <p><span class="key">年龄</span><span class="value">24</span></p>#}
+            {#                    <p><span class="key">学历</span><span class="value">本科</span></p>#}
+            {#                    <p><span class="key">性别</span><span class="value">男</span></p>#}
+            {#                </div>#}
+            {#                <div class="indetails">#}
+            {#                    <p><span class="key">实名情况</span><span class="value">已实名</span></p>#}
+            {#                    <p><span class="key">注册时长</span><span class="value">2年</span></p>#}
+            {#                    <!--                        <span class="key"></span><span class="value"></span>-->#}
+            {#                    <!--                        <span class="key"></span>学历<span class="value"></span>-->#}
+            {#                    <!--                        <span class="key"></span>性别<span class="value"></span>-->#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="detail_info">
+                <div id="id_box">
+                    <span class="span_ID" style="background-color: #00a0e9; width: 61px;color:white">ID</span>
+                    <span class="span_ID" style="width: 229px;">custom</span>
+                </div>
+                <table>
+                    <tr>
+                        <th>姓名</th>
+                        <td>张三</td>
+                        <th>年龄</th>
+                        <td>24</td>
+                        <th>性别</th>
+                        <td>男</td>
+                    </tr>
+                    <tr>
+                        <th>学历</th>
+                        <td>本科</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="btl2"></div>
+            <div id="details_xy">
+                <div id="headbox" style="width: 100%">
+                    <div id="line"></div>
+                    <p id="yhzc">用户信用</p>
+                </div>
+                <div style="width:520px;height: calc(100% - 81px);display: flex;">
+                    <div id="xinyong"></div>
+                    <div class="score">
+                        <div class="numbers">
+                            <div class="numbers_child" id="numers_child_top">91</div>
+                            <div class="numbers_child">90</div>
+                            <div class="numbers_child" id="numers_child_bottom">89</div>
+                        </div>
+                        <span style="font-size: 71px;font-weight: bold; ">分</span>
+                    </div>
+                </div>
+            </div>
+            {#            <div class="details" id="shouyue">#}
+            {#                <div class="txt">#}
+            {#                    <span class="sty1">借款</span><br><span class="sty2">52</span><span class="sty1">笔</span>#}
+            {#                </div>#}
+            {#                <div class="splitLIne"></div>#}
+            {#                <div class="txt">#}
+            {#                    <span class="sty1">借款</span><br><span class="sty2">52</span><span class="sty1">笔</span>#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="btl2"></div>
+            <table id="jiekuan">
+                <tr>
+                    <th>借款总数</th>
+                    <th>还款总数</th>
+                </tr>
+                <tr>
+                    <td>52笔</td>
+                    <td>52笔</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="switchboard">
+            <div class="choicebox">
+                <div class="switch_btn">
+                    数据概括
+                </div>
+                <div class="switch_btn">
+                    数据分析
+                </div>
+                <div class="switch_btn">
+                    实施预测
+                </div>
+                <div class="switch_btn">
+                    用户分群
+                </div>
+            </div>
+
+            <!--            可切换内容-->
+            <div class="swticthcont">
+                {#todo 1#}
+                <div class="content1" id="pg1">
+                    <div class="pg1_wrap">
+                        <form action="" style="display: flex;" class="list_zd_wrap">
+                            <div class="list_zd">
+                                <table>
+                                    <tr>
+                                        <th>申请贷款ID</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>性别</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>出生日期</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>兴趣爱好</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>婚姻状况</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收入水平</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>学历</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在行业</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定QQ</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定微信</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="list_zd">
+                                <table>
+                                    <tr>
+                                        <th>会员级别</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证时间</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证电话号码</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用评分</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台使用值</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>信用使用额度</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货人姓名</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货地址</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货地址所在地区</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货人手机号</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="button_wrapper">
+                            <button><img src="{% static 'Front_End/main/img/modi.png' %}" alt=""><span>修改</span>
+                            </button>
+                            <button><img src="{% static 'Front_End/main/img/dld.png' %}" alt=""><span>下载表格</span>
+                            </button>
+                        </div>
+                    </div>
+                    {#                    <div class="ch1">#}
+                    {#                        <div id="fg4_1">#}
+                    {##}
+                    {#                        </div>#}
+                    {#                        <div id="fg4_2">#}
+                    {##}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div style="margin: 20px;font-weight: bold;">#}
+                    {#                        相似用户#}
+                    {#                    </div>#}
+                    {#                    <div class="ch2">#}
+                    {##}
+                    {#                        <div class="wtf">#}
+                    {##}
+                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
+                    {#                            <div style="text-align: center">#}
+                    {#                                张三#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="wtf">#}
+                    {##}
+                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
+                    {#                            <div style="text-align: center">#}
+                    {#                                李四#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="wtf">#}
+                    {##}
+                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
+                    {#                            <div style="text-align: center">#}
+                    {#                                王五#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="wtf">#}
+                    {##}
+                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
+                    {#                            <div style="text-align: center">#}
+                    {#                                菊花#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                    </div>#}
+                </div>
+                {#                end_of_pg1#}
+                <div class="content1" id="pg2">
+                    <div class="fg_blc_wrap">
+                        <div class="fg_blc">
+                            <div class="fg_blc_head">
+                                <div class="line"></div>
+                                <p class="fg_blc_title">网购信用评分</p>
+                            </div>
+                            <div id="fg4_1" class="fg_blc_body">></div>
+                        </div>
+                        <div class="fg_blc">
+                            <div class="fg_blc_head">
+                                <div class="line"></div>
+                                <p class="fg_blc_title">借款用途</p>
+                            </div>
+                            <div id="fg4_2" class="fg_blc_body"></div>
+                        </div>
+                        <div class="fg_blc">
+                            <div class="fg_blc_head">
+                                <div class="line"></div>
+                                <p class="fg_blc_title">支付方式</p>
+                            </div>
+                            <div id="fg4_3" class="fg_blc_body"></div>
+                        </div>
+                        <div class="fg_blc">
+                            <div class="fg_blc_head">
+                                <div class="line"></div>
+                                <p class="fg_blc_title">散点图</p>
+                            </div>
+                            <div id="fg4_4" class="fg_blc_body"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content1" id="pg3">
+                    <div class="pg1_wrap">
+                        <form action="" style="display: flex;" class="list_zd_wrap">
+                            <div class="list_zd">
+                                <table>
+                                    <tr>
+                                        <th>申请贷款ID</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>性别</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>出生日期</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>兴趣爱好</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>婚姻状况</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收入水平</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>学历</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在行业</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定QQ</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定微信</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="list_zd">
+                                <table>
+                                    <tr>
+                                        <th>会员级别</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证时间</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证电话号码</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用评分</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台使用值</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>信用使用额度</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货人姓名</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货地址</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货地址所在地区</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货人手机号</th>
+                                        <td><input type="text"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="button_wrapper">
+                            <button><img src="{% static 'Front_End/main/img/modi.png' %}" alt=""><span>修改</span>
+                            </button>
+                            <button><img src="{% static 'Front_End/main/img/dld.png' %}" alt=""><span>下载表格</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content1" id="pg4">
+                    <div class='pg4_1' id="pg4_1"></div>
+                    <div class="pg4_1" id="pg4_2">
+                        <div class="ddiv2">
+                            <!--                标题  -->
+                            <div class="head_of_div">
+                                <div class="line"></div>
+                                决策数据
+                                <div id="search_box">
+                                    <label for="search_boxin"></label><input type="text" id="search_boxin" name="hhh"
+                                                                             placeholder="">
+                                    {#                        <img src="{% static 'Front_End/main/img/search.png' %}" alt="" onclick="">#}
+                                </div>
+                            </div>
+                            <!--                end of 标题-->
+                            <table style="width: 100%;height: 100%">
+                                <tr>
+                                    <th>用户id</th>
+                                    <th>性别</th>
+                                    <th>货款日期</th>
+                                    <th>还款日期</th>
+                                    <th>货款金额</th>
+                                    <th>信用额度</th>
+                                    <th>信用评分</th>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+                                                <div class="revinp">
+                                                    <span class="level">
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_solid" cjmark=""></i>
+                                                    <i class="level_hollow" cjmark=""></i>
+                                                    </span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>2019-10-30</td>
+                                    <td>2020-10-30</td>
+                                    <td>1,000,000</td>
+                                    <td>1,000,000</td>
+                                    <td>
+                                        <ul class="rev_pro clearfix">
+                                            <li>
+
+
+                                                <div class="revinp">
+				<span class="level">
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_solid" cjmark=""></i>
+					<i class="level_hollow" cjmark=""></i>
+				</span>
+                                                    <span class="revgrade">良</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--        end_of页面2-->
+    <!--        用户页面3-->
+    <div class="content" id="glt_page">
+        <div id="outbox">
+            <div id="headbox">
+                <div class="line"></div>
+                <p id="yhzc">修改密码</p>
+            </div>
+            <form action="{% url 'main:register' %}" name="reg" method="post" id="reg" onsubmit="return validate();">
+                {#    onsubmit要写return ,不然只是一个布尔值#}
+                <p class="words">原始密码</p>
+                <input type="text" name="id" class="inputbox">
+                <p class="words">新密码</p>
+                <input type="password" name="pwd" class="inputbox">
+                <p class="words">确认密码<span id='tishi'></span></p>
+                <input type="password" name="re_pwd" class="inputbox">
+            </form>
+            {#            <p>已经注册,点击<a href=" {% url 'main:login' %} ">登入</a></p>#}
+            <button form="reg" type="submit" value="submit">确认修改</button>
+        </div>
+
+
+    </div>
+    <!--        end_of页面3-->
+</div>
+<script src="{% static 'node_modules/echarts/dist/echarts.js' %}"></script>
+<script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+<script src="{% static 'node_modules/js-cookie/src/js.cookie.js' %}"></script>
+<script src="{% static 'Front_End/main/js/main.js' %}"></script>
+<script type="text/javascript">
+    var degree = ['', '很差', '差', '中', '良', '优', '未评分'];
+
+    //重新点评
+    function addComment2(e, inid, opt, id) {
+        $.ajax({
+            url: '/siteMessage/content',
+            type: 'post',
+            data: 'id=' + id,
+            dataType: 'json',
+            success: function (data) {
+                if (data.status == 1) {
+                    var list = $('#Addnewskill_119');
+                    list.eq(0).html(data.talent + '(人才ID：' + data.talentId + ')');
+                    list.eq(1).html(data.job);
+                    list.eq(2).html(data.ms);
+
+                    var arr = [data.total, data.expAuth, data.killAuth, data.followTime, data.formality, data.appReact];
+                    var list2 = $('span.level', '#Addnewskill_119');
+                    $('input[name="InterviewCommentInfoSub[opt]"]').val(opt + 1);
+                    list2.each(function (i, v) {
+                        var a = '';
+
+                        if (i > 0) {
+                            a = 'cjmark';
+                            $(v).parents('li').find('input').val(arr[i]);
+                        }
+                        var str = '';
+                        if (arr[i] == 6) {
+                            for (var n = 0; n <= 4; n++) {
+                                str += '<i ' + a + ' class="level_hollow"></i>';
+                            }
+                            $(v).parents('li').find('input').prop('disabled', true)
+                        } else {
+                            $(v).parents('li').find('input').prop('checked', true)
+                            for (var n = 0; n < arr[i]; n++) {
+                                str += '<i ' + a + ' class="level_solid"></i>';
+                            }
+                            for (var n = 0; n < (5 - arr[i]); n++) {
+                                str += '<i ' + a + ' class="level_hollow"></i>';
+                            }
+                        }
+                        $(v).html(str);
+                        $(v).next().html(degree[arr[i]]);
+
+                    })
+
+
+                    create_show(119);
+                } else {
+                    ui.error(data.msg, 2000);
+                }
+            }
+        })
+    }
+
+    //提交点评
+    {#function addComment3() {#}
+    {#    $.ajax({#}
+    {#        url: '/siteMessage/commentinterview',#}
+    {#        type: 'post',#}
+    {#        data: $('form[name="comment"]').serialize(),#}
+    {#        dataType: 'json',#}
+    {#        success: function (data) {#}
+    {##}
+    {#        }#}
+    {##}
+    {#    })#}
+    {#}#}
+
+        $(function () {
+            //点星星
+            $(document).on('mouseover', 'i[cjmark]', function () {
+                var num = $(this).index();
+                var pmark = $(this).parents('.revinp');
+                var mark = pmark.prevAll('input');
+
+                if (mark.prop('checked')) return false;
+
+                var list = $(this).parent().find('i');
+                for (var i = 0; i <= num; i++) {
+                    list.eq(i).attr('class', 'level_solid');
+                }
+                for (var i = num + 1, len = list.length - 1; i <= len; i++) {
+                    list.eq(i).attr('class', 'level_hollow');
+                }
+                $(this).parent().next().html(degree[num + 1]);
+
+            })
+            //点击星星
+            $(document).on('click', 'i[cjmark]', function () {
+                var num = $(this).index();
+                var pmark = $(this).parents('.revinp');
+                var mark = pmark.prevAll('input');
+
+                if (mark.prop('checked')) {
+                    mark.val('');
+                    mark.prop('checked', false);
+                    mark.prop('disabled', true);
+                } else {
+                    mark.val(num);
+                    mark.prop('checked', true);
+                    mark.prop('disabled', false);
+                }
+            })
+            //选框
+            $('#Addnewskill_119 input[type="checkbox"]').change(function () {
+                if ($(this).not(':checked')) {//!($(this).prop('checked'))
+                    $(this).prop('checked', false);
+                    $(this).prop('disabled', true)
+                    var smark = $(this).nextAll('.revinp');
+                    smark.find('span.revgrade').html('未评分');
+                    smark.find('i').attr('class', 'level_hollow');
+                    smark.val(6);
+                }
+            })
+
+
+        })
+</script>
+</body>
+
+</html>
+
+
+<!--idea-->
+<!--1.侧边栏点击出,点击入-->

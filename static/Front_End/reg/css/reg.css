@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+#outbox {
+    height: calc(539px);
+    width: calc(387px);
+    /*border: 1px red solid; !*test*!*/
+    position: relative;
+    left: 70%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 270px;
+    /*height: 53.1%;*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+select {
+    display: block;
+}
+
+#outbox button {
+    border-radius: 20px;
+    margin: 45px 0 0 0;
+}
+
+#outbox > p {
+    position: relative;
+    left: 135px;
+    transform: translate(-50%, 0);
+}

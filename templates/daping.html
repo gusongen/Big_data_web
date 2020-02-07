@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据金融风控决策系统</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Front_End/daping/css/daping.css' %}">
+</head>
+<body onload="startTime()">
+<div class="warp">
+    <div class="navi">
+        <div class="logo_box">
+            <img src="{% static 'Front_End/daping/img/cqupt_ico.png' %}" alt="" id="logo_img">
+            <img src="{% static 'Front_End/daping/img/cqupt_word.png' %}">
+            <!--                <div id="char_box">-->
+            <!--                    <span id="cqupt_ch">重庆邮电大学</span>-->
+            <!--                    <span id="cqupt_en">C Q U P T</span>-->
+            <!--                </div>-->
+        </div>
+        <span id="headline">大数据金融风控监控平台中心</span>
+        <button id="glt" onclick="window.open('{% url 'main:main' %}','_self')">管理台</button>
+        <div id="txt"></div>
+    </div>
+    <div class="center_box">
+        <!--            定义模块-->
+        <div class="mb">
+
+            <div class="module_sbox">
+                <span class="title">累计借款总额</span>
+                <span class="number"><p class="roll_number">123,456,789</p>万</span>
+                <span class="attre">累计借款笔数</span>
+                <span class="detail_num">1,234</span>
+            </div>
+            <!--            -->
+            <div class="module_sbox">
+                <span class="title">累计借款总额</span>
+                <span class="number"><p class="roll_number">123,456,789</p>万</span>
+                <span class="attre">累计借款笔数</span>
+                <span class="detail_num">1,234</span>
+            </div>
+        </div>
+        <div class="mb">
+
+            <div class="module_sbox">
+                <span class="title">累计借款总额</span>
+                <span class="number"><p class="roll_number">123,456,789</p>万</span>
+                <span class="attre">累计借款笔数</span>
+                <span class="detail_num">1,234</span>
+            </div>
+            <div class="module_sbox">
+                <span class="title">累计借款总额</span>
+                <span class="number"><p class="roll_number">123,456,789</p>万</span>
+                <span class="attre">累计借款笔数</span>
+                <span class="detail_num">1,234</span>
+            </div>
+        </div>
+
+
+        <div class="module_mbox">
+            <div class="title1">注册&绑卡&实名用户</div>
+            <div class="figure">
+                <div id="fg1_1">
+
+                </div>
+                <div id="fg1_2">
+
+                </div>
+                <div id="fg1_3">
+
+                </div>
+                <div id="fg1_4">
+
+                </div>
+            </div>
+        </div>
+        <div class="module_mbox">
+            <div class="head_box">
+                <div id="fg2_1">
+
+                </div>
+                <div class="head_right">
+                    <div class="inner_head_right">
+                        <span class="title">今日实时贷款总额</span>
+                        <span class="number">￥<p class="roll_number">12,345,678</p></span>
+
+                    </div>
+                </div>
+            </div>
+            <div id="zhexian">
+
+            </div>
+        </div>
+
+        <div class="module_lbox">
+            <div class="leftbox" id="radar_fg">
+
+            </div>
+            <div class="rightbox" id="next_7dy">
+
+            </div>
+        </div>
+        <div class="module_mbox">
+
+            <div id="map">
+            </div>
+        </div>
+        <div class="module_lbox" id="formAnfig">
+            <div id="data_list">
+            </div>
+            <div id="amout_of_year">
+
+            </div>
+            <div id="amout_of_all">
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+<script src="{% static 'node_modules/echarts/dist/echarts.js' %}"></script>
+{#<script src="{% static 'node_modules/echarts/map/js/china.js' %}"></script>#}
+<script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=GW7QgjczTRDU7rkOIZi9kclillss7xtg"></script>
+<script src="{% static 'Front_End/daping/js/jquery.leoTextAnimate.js' %}"></script>
+<script src="{% static 'Front_End/daping/js/daping.js' %}"></script>
+</body>
+</html>
+
+
+{#<!--现存问题:TODO-->#}
+{#<!--1.模块中功能放缩时不居中-->#}
+{#<!--2.背景图片-->#}
+{#<!--3.地图-->#}
+{#<!--#}
+{##}
+{#问题:#}
+{##}
+{#4.表格颜色#}
+{#5地图#}
+{#6表名#}
+{##}
+{##}
+{#名字 大数据金融风控决策系统-->#}

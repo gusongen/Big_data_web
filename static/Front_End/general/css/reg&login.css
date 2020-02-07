@@ -1,0 +1,73 @@
+.inputbox {
+    height: 33px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #e5e5e5;
+    margin: 10px 0 14px 0;
+    /*margin-top:10px ;*/
+    font-size: 17px;
+    line-height: 17px;
+    padding: 0 5px;
+}
+
+form input {
+    width: calc(271px - 10px);
+}
+
+form select {
+    width: 271px;
+}
+
+#outbox {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+body {
+    background: url('../img/reg_bg.png');
+    background-size: 100%;
+}
+
+#headbox {
+    height: 81px;
+    width: 100%;
+    /*border: 1px red solid; !*test*!*/
+    /*line-height: 81px;*/
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#line {
+    height: 35px;
+    width: 10px;
+    background: #00a0e9;
+    border-radius: 4px;
+    margin: 0 22px;
+}
+
+form p {
+    font-size: 17px;
+    line-height: 17px;
+    color: #b0b0b0;
+}
+
+#outbox > p {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#outbox button {
+    width: 271px;
+    height: 33px;
+    background: #00a0e9;
+    border: 0;
+    font-size: 19px;
+    color: white;
+
+}
+
+#outbox a {
+    text-decoration: none;
+}
