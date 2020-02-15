@@ -100,7 +100,6 @@ option_yhfq = {
         ]
     }
 };
-/************************************************************************/
 option_sjfx = {
     'fg4_1': {
         grid: {
@@ -405,6 +404,7 @@ option_xy = {
     },
 };
 option_list = [option_jctj]
+/************************************************************************/
 const default_chosen_num = '-1';
 var chosen_user = default_chosen_num;  //default
 var ages = function (str) {
@@ -420,21 +420,25 @@ var ages = function (str) {
 var renew_data = function () {   //局部刷新页面二
     $('.switch_btn').eq(0).click();
     $.getJSON('/api/user/' + chosen_user + '/', function (data) {
-        let user_info = data['user_info'];
-        $('#u_id').text(user_info['id']);
-        $('#u_age').text(function () {
-            if (user_info['birthday']) {
-                let ag;
-                if (ag = ages(user_info['birthday']))
-                    return ag;
+        try {
+            let user_info = data['user_info'];
+            $('#u_id').text(user_info['id']);
+            $('#u_age').text(function () {
+                if (user_info['birthday']) {
+                    let ag;
+                    if (ag = ages(user_info['birthday']))
+                        return ag;
+                }
+                return 28     //默认返回28岁
+            });
+            $('#u_sex').text(user_info['sex']);
+            $('#u_degree').text(user_info['degree']);
+            roll_num(user_info['pre_target']);
+            for (let key in user_info) {
+                $('#' + 'zd_' + key).val(user_info[key]);
             }
-            return 28     //默认返回28岁
-        });
-        $('#u_sex').text(user_info['sex']);
-        $('#u_degree').text(user_info['degree']);
-        roll_num(user_info['pre_target']);
-        for (let key in user_info) {
-            $('#' + 'zd_' + key).val(user_info[key]);
+        } catch (e) {
+            alert('错误' + e);
         }
     });
     //TODO: 给关系按键注册点击事件 1
@@ -450,13 +454,16 @@ $('#mod_u').click(function () {
             let valu = $(this).val();
             post_form[key] = valu;
         });
-    console.log(post_form);
-    $.post('/api/user/' + chosen_user + '/', post_form, function (data) {
-        alert('修改成功!');
-        console.log(data);
-        renew_data();
-    });
-
+    let add_chosen_user = $('#zd_id').val();
+    let pre_t = $('#zd_pre_target').val();
+    if (!add_chosen_user || !pre_t) {
+        alert("带*字段不能为空");
+    } else {
+        $.post('/api/user/' + chosen_user + '/', post_form, function (data) {
+            alert('修改成功!');
+            renew_data();
+        });
+    }
 });
 $('#del_u').click(function () {
     $.ajax('/api/user/' + chosen_user + '/', {
@@ -474,7 +481,7 @@ $('#del_u').click(function () {
 });
 $('#add_u').click(function () {
     let add_chosen_user = $('#a_zd_id').val();
-    console.log(add_chosen_user);
+    // console.log(add_chosen_user);
     let pre_t = $('#a_zd_pre_target').val();
     if (!add_chosen_user || !pre_t)
         alert("带*字段不能为空");
@@ -583,7 +590,8 @@ $(function () {
     $('.choice').eq(0).click();
 });
 
-var roll_num = function (score = 0.9) {
+var roll_num = function (prob = 0.2) {  //将1-逾期概率作为信用等级
+    let score = 1 - prob;
     score = Math.ceil(score * 100) % 100;
     $('#numers_child_top').text(score + 1);
     $('#numers_child_cen').text(score);
@@ -654,11 +662,6 @@ var load_form = function (div_id, page = 1, req = '') {
                 nav.append(pre_btn);
                 let half_btn = Math.floor(default_nav_btn / 2);
                 start_point = cur_page - half_btn > 1 ? cur_page - half_btn : 1;
-                // if (start_point + default_nav_btn - 1 > all_pages) {
-                //     alert('fuck');
-                //     start_point = all_pages + 1 - default_nav_btn;
-                // }
-                // alert(all_pages);
                 start_point = (start_point + default_nav_btn - 1 > all_pages) ? (all_pages - default_nav_btn + 1) : start_point;
                 add_to_nav(nav, default_nav_btn, start_point);
                 nav.append(next_btn);

@@ -21,9 +21,9 @@ def get_user_num(request):
     kind = request.GET.get('kind')
     confidence_line = request.GET.get('conf_line', 0.4)
     if kind == '1':
-        num = all_user.filter(pre_target__gte=confidence_line).count()
-    elif kind == '0':
         num = all_user.filter(pre_target__lt=confidence_line).count()
+    elif kind == '0':
+        num = all_user.filter(pre_target__gte=confidence_line).count()
     else:
         num = all_user.count()  # 默认返回全部用户数量
     data = {
