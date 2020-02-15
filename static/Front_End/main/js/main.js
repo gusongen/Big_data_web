@@ -467,7 +467,7 @@ $('#mod_u').click(function () {
 });
 $('#del_u').click(function () {
     $.ajax('/api/user/' + chosen_user + '/', {
-        method: 'DEL',
+        method: 'DELETE', //大写,全拼
         dataType: 'json',
         success: function (data) {
             alert('删除成功!');
