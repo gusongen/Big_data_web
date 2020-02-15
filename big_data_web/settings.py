@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'x)*$63&1pevnsq+$w&r(be#b)&zl-r82z*e12=h2+ni%a9hm8+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-   # 'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -120,6 +120,34 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'static'),
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/upload_file')
+
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': 'redis://127.0.0.1:6379/1',
+#         'OPTIONS': {
+#             "CLIENT_CLASS": 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
+# CACHES = {
+#     'default': {  ##基础三样
+#         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+#         'LOCATION': 'my_cache_table',
+#         'TIMEOUT': 60 * 5,  ##基础三样
+#     },
+#     'redis_backend': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': 'redis://127.0.0.1:6379/1',
+#         'TIMEOUT': 60 * 3,
+#         'OPTIONs': {
+#             "CLIENT_CLASS": 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
+# TODO: 升级缓存

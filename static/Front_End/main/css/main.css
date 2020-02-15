@@ -118,7 +118,7 @@ body, html {
 #operation_box_ul {
     width: 100%;
     margin-top: 130px;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 #logout {
@@ -257,7 +257,7 @@ body, html {
     font-weight: bold;
     /*font-size: 20px;*/
     font-size: 32px;
-    margin: 21px 0 22px 0;
+    margin: 10px 0 10px 0;
 
 }
 
@@ -289,7 +289,7 @@ body, html {
 /*任务栏具体*/
 .content_showbox_wrap {
     display: flex;
-    height: calc(100% - 85px);
+    height: calc(100% - 62px);
 }
 
 .content_showbox {
@@ -354,7 +354,7 @@ body, html {
     margin-left: 50px;
 }
 
-#search_boxin {
+.search_boxin {
     border: none;
     height: 60%;
     width: 70%;
@@ -494,7 +494,7 @@ body, html {
 .span_ID {
     height: 50px;
     line-height: 50px;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
     display: block;
     text-align: center;
@@ -722,14 +722,15 @@ body, html {
 
 .list_zd th {
     background-color: #fcfcfe;
-    width: 25%;
+    width: 50%;
     height: 9.1%;
     font-size: 20px;
 }
 
 .list_zd td {
-    width: 75%;
+    width: 50%;
     height: 9.1%;
+    border: 1px solid #e1e1e1;
 }
 
 .list_zd input {
@@ -758,8 +759,8 @@ body, html {
 }
 
 .button_wrapper button {
-    width: 123px;
-    height: 147px;
+    width: 115px;
+    height: 135px;
     /*border: 1px red solid; !*test*!*/
     margin: 10px 0;
     border-radius: 15px;
@@ -866,8 +867,8 @@ body, html {
 
 #outbox {
     height: calc(100% - 20px);
-    width: calc(387px);
-    /*width: 100%;*/
+    /*width: calc(387px);*/
+    width: 100%;
     margin: 10px;
     /*position: relative;*/
     /*left: 70%;*/
@@ -955,7 +956,6 @@ select {
 
 #pg4_1 {
     /*height:632px;*/
-
 }
 
 #pg4_2 {
@@ -989,7 +989,7 @@ select {
 }
 
 .fl {
-    float: left;
+    /*float: left;*/
 }
 
 .gradecon {
@@ -1001,7 +1001,7 @@ select {
 }
 
 .rev_pro {
-    transform: translateX(30%);
+    /*transform: translateX(30%);*/
 }
 
 .rev_pro li {
@@ -1017,12 +1017,14 @@ select {
 }
 
 .revinp {
-    float: left;
+    /*float: left;*/
     display: inline;
+    /*    add*/
+    width: 120px;
 }
 
 .level .level_solid, .level .level_hollow {
-    float: left;
+    /*float: left;*/
     background-image: url("../img/icon2.png");
     background-repeat: no-repeat;
     display: inline-block;
@@ -1041,4 +1043,14 @@ select {
 .revgrade {
     margin-left: 10px;
     margin-top: -10px;
+}
+
+
+.content_showbox_wrap td {
+    overflow: hidden;
+}
+
+
+.file_select {
+    width: 80%;
 }

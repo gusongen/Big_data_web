@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
     {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'Front_End\general\img\favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static "Front_End/reg/css/reg.css" %}">
     <link rel="stylesheet" href="{% static "Front_End/general/css/reg&login.css" %}">
-    <script  defer="defer" src="{% static "node_modules/jquery/dist/jquery.slim.js" %}"> </script>
-    <script defer="defer" src="{% static "Front_End/reg/js/reg.js" %}"> </script>
+    <script defer="defer" src="{% static "node_modules/jquery/dist/jquery.slim.js" %}"></script>
+    <script defer="defer" src="{% static "Front_End/reg/js/reg.js" %}"></script>
 </head>
 <body>
-    <div id="outbox">
-        <div id="headbox">
-            <div id="line"></div>
-            <p id="yhzc">用户注册</p>
-        </div>
-        <form action="{% url 'main:register' %}" name="reg" method="post" id="reg" onsubmit="return validate();">{#    onsubmit要写return ,不然只是一个布尔值#}
-            <p class="words">工号</p>
-            <input type="text" name="id" class="inputbox">
-            <p class="words">密码</p>
-            <input type="password" name="pwd" class="inputbox">
-            <p class="words">确认密码<span id='tishi'></span></p>
-            <input type="password" name="re_pwd" class="inputbox">
-            <p class="words">选择身份</p>
-            <select name="iden" form="reg" class="inputbox">
-            <option value="AD">管理员</option>
-            </select>
-        </form>
-        <p>已经注册,点击<a href=" {% url 'main:login' %} ">登入</a></p>
-        <button form="reg" type="submit" value="submit" >注册</button>
+<div id="outbox">
+    <div id="headbox">
+        <div id="line"></div>
+        <p id="yhzc">用户注册</p>
     </div>
+    <form action="{% url 'main:register' %}" name="reg" method="post" id="reg" onsubmit="return validate();">
+        {#    onsubmit要写return ,不然只是一个布尔值#}
+        <p class="words">工号</p>
+        <input type="text" name="id" class="inputbox">
+        <p class="words">密码</p>
+        <input type="password" name="pwd" class="inputbox">
+        <p class="words">确认密码<span id='tishi'></span></p>
+        <input type="password" name="re_pwd" class="inputbox">
+        <p class="words">选择身份</p>
+        <select name="iden" form="reg" class="inputbox">
+            <option value="AD">管理员</option>
+        </select>
+    </form>
+    <p>已经注册,点击<a href=" {% url 'main:login' %} ">登入</a></p>
+    <button form="reg" type="submit" value="submit">注册</button>
+</div>
 
 
 </body>

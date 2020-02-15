@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <title>大数据金融风控决策系统</title>
     {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'Front_End\general\img\favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'Front_End/main/css/main.css' %} ">
-    <script defer="defer" src="{% static "node_modules/jquery/dist/jquery.slim.js" %}"></script>
-    <script defer="defer" src="{% static "Front_End/reg/js/reg.js" %}"></script>
+    <script defer="defer" src="{% static 'Front_End/reg/js/reg.js' %}"></script>
+    <script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+    <link rel="stylesheet" href="{% static "node_modules\bootstrap\dist\css\bootstrap.css" %}">
+    <script src="{% static 'node_modules\bootstrap\dist\js\bootstrap.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body style="margin:0 auto">
+<script type="text/javascript">
+    document.body.style.zoom = 1 / window.devicePixelRatio;//像素1:1呈现
+</script>
 <div class="head">
     <div class="headp1">
         <img src="{% static 'Front_End/main/img/cqupt_ico.png' %}" alt="" id="cqupt_logo">
         <img src="{% static 'Front_End/main/img/cqupt_word.png' %}" alt="" id="words">
     </div>
     <input type="text" name="searchbox" id="head_search_box">{# TODO 搜索 #}
-    <p id="headline">大数据金融风控决策系统V1.0</p>
+    <p id="headline">大数据金融风控决策系统V2.0</p>
     <div id="zcAdr">
         <div id="zhuce" class="btn" onclick="window.open({% url 'main:register' %} ,'_self')">
             注册
@@ -47,7 +53,7 @@
                 <ul class="choice_child_wrap">
                     <li class="choice_child">数据概括</li>
                     <li class="choice_child">数据分析</li>
-                    <li class="choice_child">实施预测</li>
+                    <li class="choice_child">实时预测</li>
                     <li class="choice_child">用户分群</li>
                 </ul>
             </li>
@@ -106,7 +112,7 @@
                     <div class="content_showbox">
                         <div>
                             <div class="showbox_txt1"><span>可信用户数量</span></div>
-                            <div class="numAdw"><span class="showbox_txt2">20</span>
+                            <div class="numAdw"><span class="showbox_txt2" id="trust_num"></span>
                                 <span class="showbox_txt3">户</span></div>
                         </div>
                     </div>
@@ -114,15 +120,15 @@
                     <div class="content_showbox">
                         <div>
                             <div class="showbox_txt1"><span>不可信用户数量</span></div>
-                            <div class="numAdw"><span class="showbox_txt2">10</span>
+                            <div class="numAdw"><span class="showbox_txt2" id="utrust_num"></span>
                                 <span class="showbox_txt3">户</span></div>
                         </div>
                     </div>
                     <div class="btw_lin"></div>
                     <div class="content_showbox">
                         <div>
-                            <div class="showbox_txt1"><span>总信用户数量</span></div>
-                            <div class="numAdw"><span class="showbox_txt2">30</span>
+                            <div class="showbox_txt1"><span>总用户数量</span></div>
+                            <div class="numAdw"><span class="showbox_txt2" id="all_num"></span>
                                 <span class="showbox_txt3">户</span></div>
                         </div>
                     </div>
@@ -162,149 +168,29 @@
                     <div class="line"></div>
                     决策数据
                     <div id="search_box">
-                        <label for="search_boxin"></label><input type="text" id="search_boxin" name="hhh"
-                                                                 placeholder="">
-                        {#                        <img src="{% static 'Front_End/main/img/search.png' %}" alt="" onclick="">#}
+                        <label for="search_boxin"></label><input type="text" class="search_boxin" name="hhh"
+                                                                 placeholder="请输入用户id">
+                        <img src="{% static 'Front_End/main/img/search.png' %}" alt="" class="search_btn"
+                             id="search_box_1">
                     </div>
+                    <img src="{% static 'Front_End/main/img/renew.png' %}" alt="" onclick="load_form('#table1')"
+                         style="height: 70%;"/>
+                    <nav aria-label="Page navigation" style="margin-left: 20%;">
+                        <ul class="pagination pagination-sm" id="table1_nav">
+                        </ul>
+                    </nav>
                 </div>
                 <!--                end of 标题-->
-                <div class="content_showbox_wrap">
-                    <table style="width: 100%;height: 100%">
+                <div class="content_showbox_wrap" style="overflow: scroll;">
+                    <table style="width: 100%;height: 100%" id="table1">
                         <tr>
-                            <th>用户id</th>
+                            <th>申请贷款唯一编号</th>
                             <th>性别</th>
-                            <th>货款日期</th>
-                            <th>还款日期</th>
-                            <th>货款金额</th>
-                            <th>信用额度</th>
+                            <th>贷款时间</th>
                             <th>信用评分</th>
-                        <tr>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>2019-10-30</td>
-                            <td>2020-10-30</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>
-                                <ul class="rev_pro clearfix">
-                                    <li>
-
-
-                                        <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                            <span class="revgrade">良</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>2019-10-30</td>
-                            <td>2020-10-30</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>
-                                <ul class="rev_pro clearfix">
-                                    <li>
-                                        <div class="revinp">
-                                                    <span class="level">
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_hollow" cjmark=""></i>
-                                                    </span>
-                                            <span class="revgrade">良</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>2019-10-30</td>
-                            <td>2020-10-30</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>
-                                <ul class="rev_pro clearfix">
-                                    <li>
-
-
-                                        <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                            <span class="revgrade">良</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>2019-10-30</td>
-                            <td>2020-10-30</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>
-                                <ul class="rev_pro clearfix">
-                                    <li>
-
-
-                                        <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                            <span class="revgrade">良</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>2019-10-30</td>
-                            <td>2020-10-30</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>
-                                <ul class="rev_pro clearfix">
-                                    <li>
-
-
-                                        <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                            <span class="revgrade">良</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
+                            <th>会员级别</th>
+                            <th>信用额度</th>
+                            <th>总信用等级</th>
                         </tr>
                     </table>
                 </div>
@@ -378,20 +264,20 @@
             <div class="detail_info">
                 <div id="id_box">
                     <span class="span_ID" style="background-color: #00a0e9; width: 61px;color:white">ID</span>
-                    <span class="span_ID" style="width: 229px;">custom</span>
+                    <span class="span_ID" style="width: 229px;" id="u_id"></span>
                 </div>
                 <table>
                     <tr>
                         <th>姓名</th>
-                        <td>张三</td>
+                        <td id="u_name">保密</td>
                         <th>年龄</th>
-                        <td>24</td>
+                        <td id="u_age">24</td>
                         <th>性别</th>
-                        <td>男</td>
+                        <td id="u_sex">男</td>
                     </tr>
                     <tr>
                         <th>学历</th>
-                        <td>本科</td>
+                        <td id='u_degree'>本科</td>
                     </tr>
                 </table>
             </div>
@@ -406,22 +292,13 @@
                     <div class="score">
                         <div class="numbers">
                             <div class="numbers_child" id="numers_child_top">91</div>
-                            <div class="numbers_child">90</div>
+                            <div class="numbers_child" id="numers_child_cen">90</div>
                             <div class="numbers_child" id="numers_child_bottom">89</div>
                         </div>
                         <span style="font-size: 71px;font-weight: bold; ">分</span>
                     </div>
                 </div>
             </div>
-            {#            <div class="details" id="shouyue">#}
-            {#                <div class="txt">#}
-            {#                    <span class="sty1">借款</span><br><span class="sty2">52</span><span class="sty1">笔</span>#}
-            {#                </div>#}
-            {#                <div class="splitLIne"></div>#}
-            {#                <div class="txt">#}
-            {#                    <span class="sty1">借款</span><br><span class="sty2">52</span><span class="sty1">笔</span>#}
-            {#                </div>#}
-            {#            </div>#}
             <div class="btl2"></div>
             <table id="jiekuan">
                 <tr>
@@ -444,7 +321,7 @@
                     数据分析
                 </div>
                 <div class="switch_btn">
-                    实施预测
+                    实时预测
                 </div>
                 <div class="switch_btn">
                     用户分群
@@ -456,154 +333,112 @@
                 {#todo 1#}
                 <div class="content1" id="pg1">
                     <div class="pg1_wrap">
-                        <form action="" style="display: flex;" class="list_zd_wrap">
+                        <form action="#" style="display: flex;" class="list_zd_wrap" id="cur_user">
                             <div class="list_zd">
                                 <table>
                                     <tr>
-                                        <th>申请贷款ID</th>
-                                        <td><input type="text"></td>
+                                        <th><span style="color: red">*</span>逾期概率值</th>
+                                        <td><input type="text" id='zd_pre_target'></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span style="color: red">*</span>申请贷款唯一编号</th>
+                                        <td><input type="text" id="zd_id"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号（脱敏）</th>
+                                        <td><input type="text" id="zd_id_card_x"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证时间</th>
+                                        <td><input type="text" id="zd_auth_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证电话号码（脱敏）</th>
+                                        <td><input type="text" id="zd_phone"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用评分</th>
+                                        <td><input type="text" id="zd_credit_score"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度使用值</th>
+                                        <td><input type="text" id="zd_overdraft"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度</th>
+                                        <td><input type="text" id="zd_quota"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>用户贷款申请的提交时间</th>
+                                        <td><input type="text" id="zd_appl_sbm_tm"></td>
                                     </tr>
                                     <tr>
                                         <th>性别</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="zd_sex"></td>
                                     </tr>
                                     <tr>
                                         <th>出生日期</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>兴趣爱好</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>婚姻状况</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收入水平</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>身份证号</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>学历</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>所在行业</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>是否绑定QQ</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>是否绑定微信</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="zd_birthday"></td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="list_zd">
                                 <table>
                                     <tr>
+                                        <th>兴趣爱好</th>
+                                        <td><input type="text" id="zd_hobby"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>婚姻状况</th>
+                                        <td><input type="text" id="zd_merriage"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收入水平</th>
+                                        <td><input type="text" id="zd_income"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号(脱敏)</th>
+                                        <td><input type="text" id="zd_id_card_y"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>学历</th>
+                                        <td><input type="text" id="zd_degree"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在行业</th>
+                                        <td><input type="text" id="zd_industry"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定QQ</th>
+                                        <td><input type="text" id="zd_qq_bound"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定微信</th>
+                                        <td><input type="text" id="zd_wechat_bound"></td>
+                                    </tr>
+                                    <tr>
                                         <th>会员级别</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="zd_account_grade"></td>
                                     </tr>
                                     <tr>
-                                        <th>认证时间</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>认证电话号码</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台信用额度</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台信用评分</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台使用值</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>信用使用额度</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货人姓名</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货地址</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货地址所在地区</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货人手机号</th>
-                                        <td><input type="text"></td>
+                                        <th>添加时间</th>
+                                        <td><input type="text" id="zd_add_date"></td>
                                     </tr>
                                 </table>
                             </div>
                         </form>
                         <div class="button_wrapper">
-                            <button><img src="{% static 'Front_End/main/img/modi.png' %}" alt=""><span>修改</span>
+                            <button id="mod_u"><img src="{% static 'Front_End/main/img/modi.png' %}"
+                                                    alt=""><span>修改</span>
                             </button>
-                            <button><img src="{% static 'Front_End/main/img/dld.png' %}" alt=""><span>下载表格</span>
+                            <button id="del_u"><img src="{% static 'Front_End/main/img/del.png' %}"
+                                                    alt=""><span>删除</span>
+                            </button>
+                            <button id="dld_u"><img src="{% static 'Front_End/main/img/dld.png' %}"
+                                                    alt=""><span>下载表格</span>
                             </button>
                         </div>
                     </div>
-                    {#                    <div class="ch1">#}
-                    {#                        <div id="fg4_1">#}
-                    {##}
-                    {#                        </div>#}
-                    {#                        <div id="fg4_2">#}
-                    {##}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <div style="margin: 20px;font-weight: bold;">#}
-                    {#                        相似用户#}
-                    {#                    </div>#}
-                    {#                    <div class="ch2">#}
-                    {##}
-                    {#                        <div class="wtf">#}
-                    {##}
-                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
-                    {#                            <div style="text-align: center">#}
-                    {#                                张三#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                        <div class="wtf">#}
-                    {##}
-                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
-                    {#                            <div style="text-align: center">#}
-                    {#                                李四#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                        <div class="wtf">#}
-                    {##}
-                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
-                    {#                            <div style="text-align: center">#}
-                    {#                                王五#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                        <div class="wtf">#}
-                    {##}
-                    {#                            <img src="{% static 'Front_End/main/img/user_ico.jpeg' %}" alt="">#}
-                    {#                            <div style="text-align: center">#}
-                    {#                                菊花#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {##}
-                    {#                    </div>#}
                 </div>
                 {#                end_of_pg1#}
                 <div class="content1" id="pg2">
@@ -613,7 +448,7 @@
                                 <div class="line"></div>
                                 <p class="fg_blc_title">网购信用评分</p>
                             </div>
-                            <div id="fg4_1" class="fg_blc_body">></div>
+                            <div id="fg4_1" class="fg_blc_body"></div>
                         </div>
                         <div class="fg_blc">
                             <div class="fg_blc_head">
@@ -640,109 +475,107 @@
                 </div>
                 <div class="content1" id="pg3">
                     <div class="pg1_wrap">
-                        <form action="" style="display: flex;" class="list_zd_wrap">
+                        <form action="#" style="display: flex;" class="list_zd_wrap" id="add_user">
                             <div class="list_zd">
                                 <table>
                                     <tr>
-                                        <th>申请贷款ID</th>
-                                        <td><input type="text"></td>
+                                        <th><span style="color: red">*</span>逾期概率值</th>
+                                        <td><input type="text" id="a_zd_pre_target"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span style="color: red">*</span>申请贷款唯一编号</th>
+                                        <td><input type="text" id="a_zd_id"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号（脱敏）</th>
+                                        <td><input type="text" id="a_zd_id_card_x"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证时间</th>
+                                        <td><input type="text" id="a_zd_auth_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>认证电话号码（脱敏）</th>
+                                        <td><input type="text" id="a_zd_phone"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用评分</th>
+                                        <td><input type="text" id="a_zd_credit_score"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度使用值</th>
+                                        <td><input type="text" id="a_zd_overdraft"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>网购平台信用额度</th>
+                                        <td><input type="text" id="a_zd_quota"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>用户贷款申请的提交时间</th>
+                                        <td><input type="text" id="a_zd_appl_sbm_tm"></td>
                                     </tr>
                                     <tr>
                                         <th>性别</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="a_zd_sex"></td>
                                     </tr>
                                     <tr>
                                         <th>出生日期</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>兴趣爱好</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>婚姻状况</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收入水平</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>身份证号</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>学历</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>所在行业</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>是否绑定QQ</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>是否绑定微信</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="a_zd_birthday"></td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="list_zd">
                                 <table>
                                     <tr>
+                                        <th>兴趣爱好</th>
+                                        <td><input type="text" id="a_zd_hobby"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>婚姻状况</th>
+                                        <td><input type="text" id="a_zd_merriage"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>收入水平</th>
+                                        <td><input type="text" id="a_zd_income"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>身份证号(脱敏)</th>
+                                        <td><input type="text" id="a_zd_id_card_y"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>学历</th>
+                                        <td><input type="text" id="a_zd_degree"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在行业</th>
+                                        <td><input type="text" id="a_zd_industry"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定QQ</th>
+                                        <td><input type="text" id="a_zd_qq_bound"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>是否绑定微信</th>
+                                        <td><input type="text" id="a_zd_wechat_bound"></td>
+                                    </tr>
+                                    <tr>
                                         <th>会员级别</th>
-                                        <td><input type="text"></td>
+                                        <td><input type="text" id="a_zd_account_grade"></td>
                                     </tr>
                                     <tr>
-                                        <th>认证时间</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>认证电话号码</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台信用额度</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台信用评分</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>网购平台使用值</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>信用使用额度</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货人姓名</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货地址</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货地址所在地区</th>
-                                        <td><input type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>收货人手机号</th>
-                                        <td><input type="text"></td>
+                                        <th>添加时间</th>
+                                        <td><input type="text" id="a_zd_add_date"></td>
                                     </tr>
                                 </table>
                             </div>
                         </form>
                         <div class="button_wrapper">
-                            <button><img src="{% static 'Front_End/main/img/modi.png' %}" alt=""><span>修改</span>
+                            <button id="add_u"><img src="{% static 'Front_End/main/img/add.png' %}"
+                                                    alt=""><span>添加</span>
                             </button>
-                            <button><img src="{% static 'Front_End/main/img/dld.png' %}" alt=""><span>下载表格</span>
+                            <button id="upload_file"><img src="{% static 'Front_End/main/img/upl.png' %}" alt=""><span>上传表格</span>
                             </button>
+                            <input type="file" id="file_obj" name="file_obj" class="file_select">
                         </div>
                     </div>
                 </div>
@@ -751,258 +584,37 @@
                     <div class="pg4_1" id="pg4_2">
                         <div class="ddiv2">
                             <!--                标题  -->
+
                             <div class="head_of_div">
                                 <div class="line"></div>
                                 决策数据
                                 <div id="search_box">
-                                    <label for="search_boxin"></label><input type="text" id="search_boxin" name="hhh"
-                                                                             placeholder="">
-                                    {#                        <img src="{% static 'Front_End/main/img/search.png' %}" alt="" onclick="">#}
+                                    <label for="search_boxin"></label><input type="text" class="search_boxin" name="hhh"
+                                                                             placeholder="请输入用户id">
+                                    <img src="{% static 'Front_End/main/img/search.png' %}" alt="" class="search_btn"
+                                         id="search_box_2">
                                 </div>
+                                <img src="{% static 'Front_End/main/img/renew.png' %}" alt=""
+                                     onclick="load_form('#table2')" style="height: 70%;"/>
+                                <nav aria-label="Page navigation" style="margin-left: 20%;">
+                                    <ul class="pagination pagination-sm" id="table1_nav">
+                                    </ul>
+                                </nav>
                             </div>
                             <!--                end of 标题-->
-                            <table style="width: 100%;height: 100%">
-                                <tr>
-                                    <th>用户id</th>
-                                    <th>性别</th>
-                                    <th>货款日期</th>
-                                    <th>还款日期</th>
-                                    <th>货款金额</th>
-                                    <th>信用额度</th>
-                                    <th>信用评分</th>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-                                                <div class="revinp">
-                                                    <span class="level">
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_solid" cjmark=""></i>
-                                                    <i class="level_hollow" cjmark=""></i>
-                                                    </span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>张三</td>
-                                    <td>男</td>
-                                    <td>2019-10-30</td>
-                                    <td>2020-10-30</td>
-                                    <td>1,000,000</td>
-                                    <td>1,000,000</td>
-                                    <td>
-                                        <ul class="rev_pro clearfix">
-                                            <li>
-
-
-                                                <div class="revinp">
-				<span class="level">
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_solid" cjmark=""></i>
-					<i class="level_hollow" cjmark=""></i>
-				</span>
-                                                    <span class="revgrade">良</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="content_showbox_wrap" style="overflow: scroll;">
+                                <table style="width: 100%;height: 100%" id="table2">
+                                    <tr>
+                                        <th>申请贷款唯一编号</th>
+                                        <th>性别</th>
+                                        <th>贷款时间</th>
+                                        <th>信用评分</th>
+                                        <th>会员级别</th>
+                                        <th>信用额度</th>
+                                        <th>总信用等级</th>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1037,129 +649,9 @@
     <!--        end_of页面3-->
 </div>
 <script src="{% static 'node_modules/echarts/dist/echarts.js' %}"></script>
-<script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
 <script src="{% static 'node_modules/js-cookie/src/js.cookie.js' %}"></script>
 <script src="{% static 'Front_End/main/js/main.js' %}"></script>
-<script type="text/javascript">
-    var degree = ['', '很差', '差', '中', '良', '优', '未评分'];
 
-    //重新点评
-    function addComment2(e, inid, opt, id) {
-        $.ajax({
-            url: '/siteMessage/content',
-            type: 'post',
-            data: 'id=' + id,
-            dataType: 'json',
-            success: function (data) {
-                if (data.status == 1) {
-                    var list = $('#Addnewskill_119');
-                    list.eq(0).html(data.talent + '(人才ID：' + data.talentId + ')');
-                    list.eq(1).html(data.job);
-                    list.eq(2).html(data.ms);
-
-                    var arr = [data.total, data.expAuth, data.killAuth, data.followTime, data.formality, data.appReact];
-                    var list2 = $('span.level', '#Addnewskill_119');
-                    $('input[name="InterviewCommentInfoSub[opt]"]').val(opt + 1);
-                    list2.each(function (i, v) {
-                        var a = '';
-
-                        if (i > 0) {
-                            a = 'cjmark';
-                            $(v).parents('li').find('input').val(arr[i]);
-                        }
-                        var str = '';
-                        if (arr[i] == 6) {
-                            for (var n = 0; n <= 4; n++) {
-                                str += '<i ' + a + ' class="level_hollow"></i>';
-                            }
-                            $(v).parents('li').find('input').prop('disabled', true)
-                        } else {
-                            $(v).parents('li').find('input').prop('checked', true)
-                            for (var n = 0; n < arr[i]; n++) {
-                                str += '<i ' + a + ' class="level_solid"></i>';
-                            }
-                            for (var n = 0; n < (5 - arr[i]); n++) {
-                                str += '<i ' + a + ' class="level_hollow"></i>';
-                            }
-                        }
-                        $(v).html(str);
-                        $(v).next().html(degree[arr[i]]);
-
-                    })
-
-
-                    create_show(119);
-                } else {
-                    ui.error(data.msg, 2000);
-                }
-            }
-        })
-    }
-
-    //提交点评
-    {#function addComment3() {#}
-    {#    $.ajax({#}
-    {#        url: '/siteMessage/commentinterview',#}
-    {#        type: 'post',#}
-    {#        data: $('form[name="comment"]').serialize(),#}
-    {#        dataType: 'json',#}
-    {#        success: function (data) {#}
-    {##}
-    {#        }#}
-    {##}
-    {#    })#}
-    {#}#}
-
-        $(function () {
-            //点星星
-            $(document).on('mouseover', 'i[cjmark]', function () {
-                var num = $(this).index();
-                var pmark = $(this).parents('.revinp');
-                var mark = pmark.prevAll('input');
-
-                if (mark.prop('checked')) return false;
-
-                var list = $(this).parent().find('i');
-                for (var i = 0; i <= num; i++) {
-                    list.eq(i).attr('class', 'level_solid');
-                }
-                for (var i = num + 1, len = list.length - 1; i <= len; i++) {
-                    list.eq(i).attr('class', 'level_hollow');
-                }
-                $(this).parent().next().html(degree[num + 1]);
-
-            })
-            //点击星星
-            $(document).on('click', 'i[cjmark]', function () {
-                var num = $(this).index();
-                var pmark = $(this).parents('.revinp');
-                var mark = pmark.prevAll('input');
-
-                if (mark.prop('checked')) {
-                    mark.val('');
-                    mark.prop('checked', false);
-                    mark.prop('disabled', true);
-                } else {
-                    mark.val(num);
-                    mark.prop('checked', true);
-                    mark.prop('disabled', false);
-                }
-            })
-            //选框
-            $('#Addnewskill_119 input[type="checkbox"]').change(function () {
-                if ($(this).not(':checked')) {//!($(this).prop('checked'))
-                    $(this).prop('checked', false);
-                    $(this).prop('disabled', true)
-                    var smark = $(this).nextAll('.revinp');
-                    smark.find('span.revgrade').html('未评分');
-                    smark.find('i').attr('class', 'level_hollow');
-                    smark.val(6);
-                }
-            })
-
-
-        })
-</script>
 </body>
 
 </html>

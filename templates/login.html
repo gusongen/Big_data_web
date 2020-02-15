@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'Front_End\general\img\favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static "Front_End/login/css/login.css" %}">
     <link rel="stylesheet" href="{% static "Front_End/general/css/reg&login.css" %}">
     <script defer="defer" src="{% static "node_modules/jquery/dist/jquery.slim.js" %}"></script>
@@ -25,7 +26,8 @@
         <p class="words">密码</p>
         <input type="password" name="pwd" class="inputbox">
     </form>
-    <p><span id="rem_pwd"><input type="checkbox" name="stu" form="login">记住密码</span><span>尚未注册,点击<a href="{% url 'main:register' %}">注册</a></span>
+    <p><span id="rem_pwd"><input type="checkbox" name="stu" form="login">记住密码</span><span>尚未注册,点击<a
+            href="{% url 'main:register' %}">注册</a></span>
     </p>
     <button form="login" type="submit" value="submit">登入</button>
 </div>

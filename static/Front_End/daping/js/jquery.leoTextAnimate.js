@@ -17,7 +17,7 @@
 			if (this.element.find('.TextAnimate').length <= 0) {
 				var html = method.getHtml(this.options, this.string);
 				
-				console.log(html)
+				// console.log(html)
 				this.element.html(html);
 			}
 			this.reset();

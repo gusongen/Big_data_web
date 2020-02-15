@@ -507,7 +507,7 @@ function getRndInteger(min, max) {
 
 for (var i = 0; i < round; i++) {
     let cur_x = getRndInteger(x_min, x_max), cur_y = getRndInteger(y_min, y_max);
-    console.log(i + '.....' + cur_x + '....' + cur_y);
+    // console.log(i + '.....' + cur_x + '....' + cur_y);
     var point = new BMap.Point(cur_x, cur_y);
     var marker = new BMap.Marker(point);
     map.addOverlay(marker);
