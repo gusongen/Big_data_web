@@ -469,7 +469,6 @@ $('#del_u').click(function () {
     $.ajax('/api/user/' + chosen_user + '/', {
         method: 'DEL',
         dataType: 'json',
-        async: false,
         success: function (data) {
             alert('删除成功!');
             chosen_user = default_chosen_num;
