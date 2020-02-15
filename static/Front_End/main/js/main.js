@@ -472,8 +472,6 @@ $('#del_u').click(function () {
         success: function (data) {
             alert('删除成功!');
             chosen_user = default_chosen_num;
-            console.log(data);
-            // $('.switch_btn').eq(0).click();
             renew_data();
         }
     });
@@ -766,7 +764,7 @@ $('#upload_file').click(function () {
         // formdata.append('csrfmiddlewaretoken', csrf);
         $.ajax({
             url: "/api/upload_csv",
-            type: 'post',
+            type: 'POST',
             async: false,
             data: formdata,
             processData: false, // 不处理数据( 必须有)

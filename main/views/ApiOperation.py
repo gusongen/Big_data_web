@@ -138,7 +138,7 @@ def user(request, user_id):
                 'msg': str(e),
             }
         return JsonResponse(data=data)
-    elif request.method == 'DEL':
+    elif request.method == 'DELETE':
         if the_user:
             the_user.delete()
             data = {
@@ -165,13 +165,9 @@ def user(request, user_id):
 def upload_csv(request):
     if request.method == 'POST':
         file_obj = request.FILES.get('file_obj')
-        # print(file_obj.name.split('.')[-1])
         print(file_obj.name.split('.')[-1] != 'csv')
         if file_obj.name.split('.')[-1] != 'csv':
-            print('hh')
             return JsonResponse({'status': 400, "msg": 'file must be a csv !'})
-            # return HttpResponse('hh')
-            print('hh2')
         file_name = str(int(time.time())) + '_' + file_obj.name  # 防止撞名
         path = os.path.join(MEDIA_ROOT, file_name)
         with open(path, 'wb+') as f:
