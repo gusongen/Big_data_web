@@ -16,7 +16,7 @@ class User(models.Model):
 class AppUser(models.Model):
     # bound = [('Y', 'has_bind'), ('N', 'not_blind')]  # 是否绑定
     # pre_target和 id必须填
-    default_max_len = 32
+    default_max_len = 64
     pre_target = models.FloatField(null=False)  # 预测值
     id = models.CharField(max_length=18, null=False, primary_key=True, unique=True)  # 申请贷款唯一编号
     id_card_x = models.CharField(max_length=default_max_len, null=True)
@@ -28,7 +28,7 @@ class AppUser(models.Model):
     appl_sbm_tm = models.CharField(null=True, max_length=default_max_len)
     sex = models.CharField(null=True, max_length=default_max_len)
     birthday = models.CharField(null=True, max_length=default_max_len)
-    hobby = models.CharField(null=True, max_length=default_max_len)
+    hobby = models.CharField(null=True, max_length=2*default_max_len)
     merriage = models.CharField(null=True, max_length=default_max_len)
     income = models.CharField(null=True, max_length=default_max_len)
     id_card_y = models.CharField(null=True, max_length=default_max_len)

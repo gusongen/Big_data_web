@@ -765,7 +765,6 @@ $('#upload_file').click(function () {
         $.ajax({
             url: "/api/upload_csv",
             type: 'POST',
-            async: false,
             data: formdata,
             processData: false, // 不处理数据( 必须有)
             contentType: false,  //不设置内容类型 ( 必须要)
@@ -780,6 +779,7 @@ $('#upload_file').click(function () {
                 }
             }
         })
+		alert('csv已经上传,请等待...');
     } else {
         alert("请先选中文件");
     }
