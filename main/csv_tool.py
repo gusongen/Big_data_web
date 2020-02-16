@@ -2,12 +2,18 @@ import os
 import time
 import pandas as pd
 from main.models import AppUser
+import chardet
 
 
 def csv_to_database(file_path):
     global df
     try:
-        reader = pd.read_csv(os.path.normpath(file_path), encoding="gbk", sep=',', iterator=True, dtype={'id': str, })
+        with open(file_path, 'rb') as e:
+            ans = chardet.detect(e.read(10000))
+            ans = ans.get('encoding')
+        print("encoding:", ans, '\nend_detect')
+        enc = r'utf-8' if (ans == r"utf-8") else r'gbk'
+        reader = pd.read_csv(os.path.normpath(file_path), encoding=enc, sep=',', iterator=True, dtype={'id': str, })
         i = 0
         while True:
             try:
