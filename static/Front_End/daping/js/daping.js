@@ -139,8 +139,8 @@ echarts.init(document.getElementById("fg2_1")).setOption({
     }
 });
 echarts.init(document.getElementById("zhexian")).setOption({
-    grid:{
-      bottom:'25%',
+    grid: {
+        bottom: '25%',
     },
     xAxis: {
         type: 'category',
@@ -167,7 +167,12 @@ echarts.init(document.getElementById("zhexian")).setOption({
 echarts.init(document.getElementById("radar_fg")).setOption({
     title: {
         text: '借款用途',
-        subtext: "A.贷款买房\nB.贷款买车\nC.个人消费\nD.贷款装修\nE.企业贷款\nF.吃饭   ",
+        subtext: "A资金周转\n" +
+            "B生产经营\n" +
+            "C固定资产\n" +
+            "D个人消费\n" +
+            "E投资\n" +
+            "F其他\n",
         x: 'right',
         y: "30%",
         textStyle: {
@@ -207,7 +212,7 @@ echarts.init(document.getElementById("next_7dy")).setOption({
         color: "white",
     },
     title: {
-        text: '近7日还款率',
+        text: '近七日借款/还款人数',
         left: 'center',
         top: 'bottom',
         textStyle: {
@@ -293,14 +298,27 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
     ],
     yAxis: [
         {
-            type: 'value',
-            name: '金额',
-            min: 0,
-            max: 250,
-            interval: 50,
-            axisLabel: {
-                formatter: '{value} 万'
-            }
+            // type: 'value',
+            // name: '金额',
+            // min: 0,
+            // max: 250,
+            // interval: 50,
+            // axisLabel: {
+            //     formatter: '{value} 万'
+            // },
+
+            type: 'category',
+            axisTick: {
+                show: false
+            },
+            data: ["32000万",
+                "28000万",
+                "24000万",
+                "16000万",
+                "12000万",
+                "8000万",
+                "4000万"].reverse()
+
         },
         {
             type: 'value',
@@ -318,12 +336,12 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
         {
             name: '预测金额',
             type: 'bar',
-            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+            data: [2.0, 4.9, 7.0, 3.2, 5.6, 7.7, 5.6, 6.2, 3.6, 2.0, 6.4, 3.3]
         },
         {
             name: '实际金额',
             type: 'bar',
-            data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+            data: [2.6, 5.9, 9.0, 6.4, 8.7, 7.7, 8.6, 8.2, 4.7, 8.8, 6.0, 2.3]
         },
         {
             name: '对比',
@@ -335,8 +353,11 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
 });
 
 
-var dataAxis = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 var data = [220, 182, 191, 234, 290, 330, 310, 123, 442, 321, 90, 149, 210, 122, 133, 334, 198, 123, 125, 220];
+var dataAxis = [];
+for (let i = 1; i <= data.length; i++) {
+    dataAxis.push(i);
+}
 var yMax = 500;
 var dataShadow = [];
 
@@ -352,7 +373,7 @@ var option2 = {
         color: "white",
     },
     title: {
-        text: '总成交借款',
+        text: '每日总成交笔数',
         textStyle: {
             color: "white",
         },
@@ -360,7 +381,7 @@ var option2 = {
     xAxis: {
         data: dataAxis,
         axisLabel: {
-            inside: true,
+            inside: false,
             textStyle: {
                 color: '#fff'
             }
@@ -443,7 +464,10 @@ var myChart = echarts.init(document.getElementById("amout_of_all")).setOption(op
 
 
 echarts.init(document.getElementById("data_list")).setOption({
-    xAxis: {
+    grid: {
+        x: 55,
+    }
+    , xAxis: {
         axisLabel: {
             inside: true,
             textStyle: {
@@ -452,12 +476,22 @@ echarts.init(document.getElementById("data_list")).setOption({
         }
     },
     yAxis: {
+        type: 'category',
         axisLabel: {
-            inside: true,
+            inside: false,
             textStyle: {
                 color: '#fff'
             }
         }
+        ,
+        data: ['', '16000万', '',
+            '1400万', '',
+            '12000万', '',
+            '1000万', '',
+            '800万', '',
+            '600万', '',
+            '400万',].reverse()
+
     },
     title: {
         text: '借贷总金额随时间变化',
@@ -512,23 +546,26 @@ for (var i = 0; i < round; i++) {
     var marker = new BMap.Marker(point);
     map.addOverlay(marker);
 }
-
+var base_num = ["7232", "370", "5", "2", '12345'];
 var fuck = function () {
-    $('.roll_number').leoTextAnimate('reload', {text: thousands()});
+    for (let i = 0; i < base_num.length; i++) {
+        let text = thousands(base_num[i]);
+        $('.roll_number').eq(i).leoTextAnimate('reload', {text: text});
+    }
 };
-var thousands = function (lenth = 100000000) {
-    num = Date.now() % lenth + Math.ceil(Math.random() * 1000)
-    var str = num.toString();
+var thousands = function (base, lenth = 1000) {
+    num = Date.now() % lenth + Math.ceil(Math.random() * 100)
+    var str = base + num.toString();
     var reg = str.indexOf(".") > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(?:\d{3})+$)/g;
     return str.replace(reg, "$1,");
 };
-$('.roll_number').text(thousands());
+// $('.roll_number').text(thousands());
 $('.roll_number:odd').parent().css('color', '#64fdff');
 $('.roll_number:even').parent().css('color', '#ffbb46');
-$('.roll_number').leoTextAnimate({
-    delay: 0,
-    autorun: true,
-    fixed: [',', ':', '.'],
-    start: '-'
-});
+// $('.roll_number').leoTextAnimate({
+//     delay: 0,
+//     autorun: true,
+//     fixed: [',', ':', '.'],
+//     start: '-'
+// });
 setInterval("fuck()", 5000);

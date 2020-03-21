@@ -243,6 +243,7 @@ option_jctj = {
         },
         yAxis: {
             type: 'category',
+              data: ['郑州', '北京', '天津', '上海', '成都', '重庆']
 
         },
         series: [
@@ -335,7 +336,7 @@ option_jctj = {
                 ['50%', '70%'],
             data:
                 [
-                    {name: '小学及以下', value: 0.1},
+                    {name: '未知', value: 0.1},
                     {name: '大学', value: 0.6},
                     {name: '中学', value: 0.1},
                     {name: '硕博', value: 0.1},
