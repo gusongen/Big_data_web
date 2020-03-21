@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>大数据金融风控决策系统</title>
+    <title>大数据金融风控预测系统</title>
     {% load static %}
     <link rel="icon" type="image/x-ico" href="{% static 'Front_End\general\img\favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'Front_End/main/css/main.css' %} ">
@@ -22,7 +22,7 @@
         <img src="{% static 'Front_End/main/img/cqupt_word.png' %}" alt="" id="words">
     </div>
     <input type="text" name="searchbox" id="head_search_box">{# TODO 搜索 #}
-    <p id="headline">大数据金融风控决策系统V2.0</p>
+    <p id="headline">大数据金融风控预测系统V2.0</p>
     <div id="zcAdr">
         <div id="zhuce" class="btn" onclick="window.open({% url 'main:register' %} ,'_self')">
             注册
@@ -41,11 +41,11 @@
         {#        ###########################################################}
         <ul id="operation_box_ul">
             <li id="yhgl">
-                <div class="choice"><img src="{% static 'Front_End/main/img/logo1.png' %}" alt="">决策管理</div>
+                <div class="choice"><img src="{% static 'Front_End/main/img/logo1.png' %}" alt="">预测管理</div>
                 <ul class="choice_child_wrap">
-                    <li class="choice_child">决策分析</li>
-                    <li class="choice_child">决策统计</li>
-                    <li class="choice_child">决策数据</li>
+                    <li class="choice_child">预测分析</li>
+                    <li class="choice_child">预测统计</li>
+                    <li class="choice_child">预测数据</li>
                 </ul>
             </li>
             <li id="yhhx">
@@ -105,7 +105,7 @@
                 <!--                标题  -->
                 <div class="head_of_div">
                     <div class="line"></div>
-                    决策分析
+                    预测分析
                 </div>
                 <!--                end of 标题-->
                 <div class="content_showbox_wrap">
@@ -146,7 +146,7 @@
                 <!--                标题  -->
                 <div class="head_of_div">
                     <div class="line"></div>
-                    决策统计
+                    预测统计
                 </div>
                 <!--                end of 标题-->
                 <div class="content_showbox_wrap">
@@ -166,7 +166,7 @@
                 <!--                标题  -->
                 <div class="head_of_div">
                     <div class="line"></div>
-                    决策数据
+                    预测数据
                     <div id="search_box">
                         <label for="search_boxin"></label><input type="text" class="search_boxin" name="hhh"
                                                                  placeholder="请输入用户id">
@@ -587,7 +587,7 @@
 
                             <div class="head_of_div">
                                 <div class="line"></div>
-                                决策数据
+                                预测数据
                                 <div id="search_box">
                                     <label for="search_boxin"></label><input type="text" class="search_boxin" name="hhh"
                                                                              placeholder="请输入用户id">
