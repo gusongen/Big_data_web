@@ -122,3 +122,9 @@ invalid request block size: 20047 (max 4096)...skip
 [pid: 15508|app: 0|req: 17/69] 211.161.245.248 () {44 vars in 830 bytes} [Sat Mar 21 09:21:59 2020] GET /dp/ => generated 4487 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
 [pid: 15508|app: 0|req: 18/70] 101.132.113.110 () {34 vars in 427 bytes} [Sat Mar 21 10:48:21 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
 [pid: 15507|app: 0|req: 14/71] 101.132.113.110 () {34 vars in 439 bytes} [Sat Mar 21 10:48:21 2020] GET /login/ => generated 1224 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+-- unavailable modifier requested: 3 --
+[pid: 15507|app: 0|req: 15/73] 47.101.199.100 () {34 vars in 454 bytes} [Sat Mar 21 12:40:17 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 17/74] 47.101.199.100 () {34 vars in 466 bytes} [Sat Mar 21 12:40:17 2020] GET /login/ => generated 1224 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+invalid request block size: 21327 (max 4096)...skip
+invalid request block size: 20047 (max 4096)...skip
+-- unavailable modifier requested: 4 --
