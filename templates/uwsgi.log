@@ -128,3 +128,124 @@ invalid request block size: 20047 (max 4096)...skip
 invalid request block size: 21327 (max 4096)...skip
 invalid request block size: 20047 (max 4096)...skip
 -- unavailable modifier requested: 4 --
+invalid request block size: 21573 (max 4096)...skip
+[pid: 15508|app: 0|req: 19/76] 211.161.248.76 () {40 vars in 713 bytes} [Sat Mar 21 15:11:43 2020] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 15507|app: 0|req: 16/77] 211.161.248.76 () {40 vars in 725 bytes} [Sat Mar 21 15:11:43 2020] GET /login/ => generated 1224 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 20/78] 211.161.248.76 () {50 vars in 957 bytes} [Sat Mar 21 15:11:46 2020] POST /login/ => generated 0 bytes in 4 msecs (HTTP/1.1 302) 5 headers in 199 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 17/79] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:11:46 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 21/80] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:11:46 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 67 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 19/81] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:11:46 2020] GET /api/get_user_num/ => generated 42 bytes in 63 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 15/82] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:11:46 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 78 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 19/83] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:11:46 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 92 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 16/84] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:11:58 2020] GET /main/ => generated 31488 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 17/85] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:11:58 2020] GET /api/get_user_num/ => generated 42 bytes in 60 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 20/86] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:11:58 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 68 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 22/87] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:11:58 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 72 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 18/88] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:11:58 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 91 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 21/89] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:00 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 19/90] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:00 2020] GET /api/get_user_num/ => generated 42 bytes in 112 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 23/91] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:00 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 136 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15507|app: 0|req: 19/92] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:00 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 140 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 19/93] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:00 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 179 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 24/94] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:01 2020] GET /main/ => generated 31488 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 22/95] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/ => generated 42 bytes in 60 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 25/96] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 68 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 20/97] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 79 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 20/98] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 87 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 23/99] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:01 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 26/100] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/ => generated 42 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 21/101] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 80 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 21/102] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 85 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 22/103] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:01 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 24/104] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 107 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 25/105] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/ => generated 42 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 22/106] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 70 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 28/107] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 78 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 28/108] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:01 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 91 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 23/109] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:02 2020] GET /main/ => generated 31488 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 24/110] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/ => generated 42 bytes in 40 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 27/111] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 72 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 24/112] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 29/113] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:02 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 27/114] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 102 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 25/115] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 28/116] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:02 2020] GET /main/ => generated 31488 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 25/117] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/ => generated 42 bytes in 67 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 30/118] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 25/119] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 87 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 32/120] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:02 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 29/121] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/ => generated 42 bytes in 68 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 26/122] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 32/123] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 77 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15507|app: 0|req: 26/124] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:02 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 93 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 27/125] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:03 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15507|app: 0|req: 27/126] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:03 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 65 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 31/127] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:03 2020] GET /api/get_user_num/ => generated 42 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15506|app: 0|req: 31/128] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:03 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 104 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 33/129] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:12:04 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 32/130] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:12:04 2020] GET /api/get_user_num/ => generated 42 bytes in 82 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 34/131] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:04 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 89 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15505|app: 0|req: 28/132] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:12:04 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 90 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15507|app: 0|req: 28/133] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:12:04 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 111 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15508|app: 0|req: 35/134] 211.161.248.76 () {46 vars in 864 bytes} [Sat Mar 21 15:13:48 2020] GET /main/ => generated 31488 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 15508|app: 0|req: 36/135] 211.161.248.76 () {44 vars in 782 bytes} [Sat Mar 21 15:13:48 2020] GET /api/get_user_num/ => generated 42 bytes in 79 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15507|app: 0|req: 29/136] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:13:48 2020] GET /api/get_user_num/?kind=0 => generated 41 bytes in 91 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15506|app: 0|req: 33/137] 211.161.248.76 () {44 vars in 795 bytes} [Sat Mar 21 15:13:48 2020] GET /api/get_user_num/?kind=1 => generated 42 bytes in 96 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 15505|app: 0|req: 29/138] 211.161.248.76 () {44 vars in 813 bytes} [Sat Mar 21 15:13:49 2020] GET /api/get_users/?page=1&short=true& => generated 1123 bytes in 46 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/big_data_web/templates
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8888)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /var/www/big_data_web/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 21 15:18:20 2020] ***
+compiled with version: 5.4.0 20160609 on 04 February 2020 17:08:01
+os: Linux-4.4.0-173-generic #203-Ubuntu SMP Wed Jan 15 02:55:01 UTC 2020
+nodename: iZuf65k4ho3tbe76g8ory6Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/big_data_web/templates
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/big_data_web/
+your processes number limit is 7829
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Oct  8 2019, 13:06:37)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/.virtualenvs/big_data
+Python main interpreter initialized at 0x18c2d00
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x18c2d00 pid: 15503 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 15503)
+spawned uWSGI worker 1 (pid: 17062, cores: 2)
+spawned uWSGI worker 2 (pid: 17063, cores: 2)
+spawned uWSGI worker 3 (pid: 17064, cores: 2)
+spawned uWSGI worker 4 (pid: 17065, cores: 2)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
