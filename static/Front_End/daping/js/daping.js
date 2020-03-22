@@ -32,8 +32,8 @@ echarts.init(document.getElementById('fg1_1'), 'light').setOption({
         type: 'pie',
         radius: ['50%', '70%'],
         data: [
-            {name: 'A', value: 0.4},
-            {name: 'B', value: 0.5},
+            {name: 'A', value: 0.8},
+            {name: 'B', value: 0.2},
         ],
         label: {
             show: false,
@@ -57,9 +57,8 @@ echarts.init(document.getElementById('fg1_2')).setOption({
         type: 'pie',
         radius: ['50%', '70%'],
         data: [
-            {name: 'A', value: 0.4},
-            {name: 'B', value: 0.1},
-            {name: 'c', value: 0.5},
+            {name: 'A', value: 0.7},
+            {name: 'B', value: 0.3},
         ],
         label: {
             show: false,
@@ -83,9 +82,8 @@ echarts.init(document.getElementById('fg1_3'), 'light').setOption({
         type: 'pie',
         radius: ['50%', '70%'],
         data: [
-            {name: 'A', value: 0.2},
-            {name: 'B', value: 0.1},
-            {name: 'c', value: 0.7},
+            {name: 'A', value: 0.85},
+            {name: 'B', value: 0.15},
         ],
         label: {
             show: false,
@@ -110,8 +108,8 @@ echarts.init(document.getElementById('fg1_4')).setOption({
         type: 'pie',
         radius: ['50%', '70%'],
         data: [
-            {name: 'A', value: 0.7},
-            {name: 'B', value: 0.3},
+            {name: 'A', value: 0.6},
+            {name: 'B', value: 0.4},
         ],
         label: {
             show: false,
@@ -231,7 +229,7 @@ echarts.init(document.getElementById("next_7dy")).setOption({
         {
             type: 'category',
             boundaryGap: false,
-            data: ['12/01', '01/01', '02/01', '03/01', '04/01', '05/01', '06/01'],
+            data: ['1', '2', '3', '4', '5', '6', '7'],
 
         }
     ],
@@ -291,9 +289,10 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
         {
             type: 'category',
             data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
-            axisPointer: {
-                type: 'shadow'
-            }
+            // axisTick:1,
+            // axisPointer: {
+            //     type: 'shadow'
+            // }
         }
     ],
     yAxis: [
@@ -326,23 +325,14 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
             show: false,
             min: 0,
             max: 25,
-            interval: 5,
+            interval: 1,
             axisLabel: {
                 formatter: '{value} °C'
             }
         }
     ],
     series: [
-        {
-            name: '预测金额',
-            type: 'bar',
-            data: [2.0, 4.9, 7.0, 3.2, 5.6, 7.7, 5.6, 6.2, 3.6, 2.0, 6.4, 3.3]
-        },
-        {
-            name: '实际金额',
-            type: 'bar',
-            data: [2.6, 5.9, 9.0, 6.4, 8.7, 7.7, 8.6, 8.2, 4.7, 8.8, 6.0, 2.3]
-        },
+
         {
             name: '对比',
             type: 'line',
@@ -353,7 +343,7 @@ echarts.init(document.getElementById("amout_of_year"), 'light').setOption({
 });
 
 
-var data = [220, 182, 191, 234, 290, 330, 310, 123, 442, 321, 90, 149, 210, 122, 133, 334, 198, 123, 125, 220];
+var data = [220, 182, 191, 234, 290, 330, 310, 123, 442, 149, 321, 90, 149, 210, 122, 133, 334, 198, 123, 125, 220, 90, 149, 210, 122, 133, 334, 198, 123, 125, 220];
 var dataAxis = [];
 for (let i = 1; i <= data.length; i++) {
     dataAxis.push(i);
@@ -462,12 +452,15 @@ var myChart = echarts.init(document.getElementById("amout_of_all")).setOption(op
 //     });
 // });
 
-
+var data_of_day=[]
+for(let i=1;i<=30;i++)
+    data_of_day.push(i)
 echarts.init(document.getElementById("data_list")).setOption({
     grid: {
         x: 55,
     }
     , xAxis: {
+        data:data_of_day,
         axisLabel: {
             inside: true,
             textStyle: {
@@ -485,7 +478,7 @@ echarts.init(document.getElementById("data_list")).setOption({
         }
         ,
         data: ['', '16000万', '',
-            '1400万', '',
+            '14000万', '',
             '12000万', '',
             '1000万', '',
             '800万', '',
@@ -507,14 +500,14 @@ echarts.init(document.getElementById("data_list")).setOption({
             [10.0, 4.04],
             [8.0, 6.95],
             [13.0, 7.58],
-            [9.0, 8.81],
-            [11.0, 8.33],
+            [6.0, 8.81],
+            [21.0, 8.33],
             [14.0, 9.96],
-            [6.0, 7.24],
-            [4.0, 4.26],
+            [26.0, 7.24],
+            [14.0, 4.26],
             [12.0, 10.84],
-            [7.0, 4.82],
-            [5.0, 5.68]
+            [17.0, 8.82],
+            [20.0, 5.68]
         ],
         type: 'scatter',
 
@@ -549,7 +542,9 @@ for (var i = 0; i < round; i++) {
 var base_num = ["7232", "370", "5", "2", '12345'];
 var fuck = function () {
     for (let i = 0; i < base_num.length; i++) {
-        let text = thousands(base_num[i]);
+        let text = thousan
+
+        ds(base_num[i]);
         $('.roll_number').eq(i).leoTextAnimate('reload', {text: text});
     }
 };

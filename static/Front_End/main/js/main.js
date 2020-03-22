@@ -276,10 +276,10 @@ option_jctj = {
                 ['50%', '70%'],
             data:
                 [
-                    {name: '18-20', value: 0.1},
-                    {name: '21-30', value: 0.4},
-                    {name: '31-40', value: 0.3},
-                    {name: '41-50', value: 0.2},
+                    {name: '0-18', value: 0.1},
+                    {name: '18-40', value: 0.4},
+                    {name: '40以上', value: 0.25},
+                    {name: '未知', value: 0.25},
                 ],
             label:
                 {
@@ -307,8 +307,9 @@ option_jctj = {
                 ['50%', '70%'],
             data:
                 [
-                    {name: '男', value: 0.7},
-                    {name: '女', value: 0.3},
+                    {name: '男', value: 0.45},
+                    {name: '女', value: 0.4},
+                    {name: '未知', value: 0.15},
                 ],
             label:
                 {
@@ -336,11 +337,11 @@ option_jctj = {
                 ['50%', '70%'],
             data:
                 [
-                    {name: '未知', value: 0.1},
-                    {name: '大学', value: 0.6},
+                    {name: '未知', value: 0.35},
+                    {name: '大学', value: 0.3},
                     {name: '中学', value: 0.1},
                     {name: '硕博', value: 0.1},
-                    {name: '其他', value: 0.1},
+                    {name: '未知', value: 0.15},
                 ],
             label:
                 {
@@ -435,6 +436,8 @@ var renew_data = function () {   //局部刷新页面二
             $('#u_sex').text(user_info['sex']);
             $('#u_degree').text(user_info['degree']);
             roll_num(user_info['pre_target']);
+            $("#yhdj").text(user_info['account_grade'])
+            $("#xypf").text(user_info['credit_score'])
             for (let key in user_info) {
                 $('#' + 'zd_' + key).val(user_info[key]);
             }
@@ -571,18 +574,22 @@ $('.switch_btn').click(function () {
 });
 let renew_page0 = function () {
     $.getJSON('/api/get_user_num/?kind=1', function (data) {
-        $('#trust_num').text(data['num']);
+        $('#trust_num').text(ts(data['num']));
     });
 
     $.getJSON('/api/get_user_num/?kind=0', function (data) {
-        $('#utrust_num').text(data['num']);
+        $('#utrust_num').text(ts(data['num']));
     });
 
     $.getJSON('/api/get_user_num/', function (data) {
-        $('#all_num').text(data['num']);
+        $('#all_num').text(ts(data['num']));
     });
 };
-
+var ts = function (base) {
+    var str = base.toString();
+    var reg = str.indexOf(".") > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(?:\d{3})+$)/g;
+    return str.replace(reg, "$1,");
+};
 
 $(function () {
     $('.choice').eq(0).click();
