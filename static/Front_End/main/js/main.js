@@ -251,10 +251,7 @@ option_jctj = {
                 type: 'bar',
                 data: [18203, 23489, 29034, 104970, 131744, 630230]
             },
-            {
-                type: 'bar',
-                data: [19325, 23438, 31000, 121594, 134141, 681807]
-            }
+
         ]
     },
     "fg3_2": {
@@ -337,10 +334,11 @@ option_jctj = {
                 ['50%', '70%'],
             data:
                 [
-                    {name: '未知', value: 0.35},
-                    {name: '大学', value: 0.3},
+
+                    {name: '大学', value: 0.35},
                     {name: '中学', value: 0.1},
-                    {name: '硕博', value: 0.1},
+                    {name: '硕博', value: 0.3},
+                    {name: '其他', value: 0.1},
                     {name: '未知', value: 0.15},
                 ],
             label:
@@ -431,7 +429,7 @@ var renew_data = function () {   //局部刷新页面二
                     if (ag = ages(user_info['birthday']))
                         return ag;
                 }
-                return 28     //默认返回28岁
+                return "空缺"     //默认返回28岁
             });
             $('#u_sex').text(user_info['sex']);
             $('#u_degree').text(user_info['degree']);

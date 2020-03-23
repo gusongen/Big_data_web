@@ -217,7 +217,15 @@ echarts.init(document.getElementById("next_7dy")).setOption({
             color: "white",
         },
     },
-
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
     grid: {
         left: '3%',
         right: '4%',
@@ -368,6 +376,15 @@ var option2 = {
             color: "white",
         },
     },
+        tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
     xAxis: {
         data: dataAxis,
         axisLabel: {
@@ -452,15 +469,15 @@ var myChart = echarts.init(document.getElementById("amout_of_all")).setOption(op
 //     });
 // });
 
-var data_of_day=[]
-for(let i=1;i<=30;i++)
+var data_of_day = []
+for (let i = 1; i <= 30; i++)
     data_of_day.push(i)
 echarts.init(document.getElementById("data_list")).setOption({
     grid: {
         x: 55,
     }
     , xAxis: {
-        data:data_of_day,
+        data: data_of_day,
         axisLabel: {
             inside: true,
             textStyle: {
@@ -492,6 +509,15 @@ echarts.init(document.getElementById("data_list")).setOption({
         textStyle: {
             color: "white",
         },
+    },
+        tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
     },
 
     series: [{
