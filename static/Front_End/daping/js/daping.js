@@ -504,7 +504,7 @@ echarts.init(document.getElementById("data_list")).setOption({
 
     },
     title: {
-        text: '借贷总金额随时间变化',
+        text: '每日借款金额随时间变化',
         left: 'center',
         textStyle: {
             color: "white",
@@ -523,6 +523,10 @@ echarts.init(document.getElementById("data_list")).setOption({
     series: [{
         symbolSize: 20,
         data: [
+		[1,2.03],
+		[3,4],
+		[4,3.5],
+		[5,3],
             [10.0, 4.04],
             [8.0, 6.95],
             [13.0, 7.58],
@@ -530,6 +534,7 @@ echarts.init(document.getElementById("data_list")).setOption({
             [21.0, 8.33],
             [14.0, 9.96],
             [26.0, 7.24],
+	[31,10],
             [14.0, 4.26],
             [12.0, 10.84],
             [17.0, 8.82],
@@ -568,7 +573,7 @@ for (var i = 0; i < round; i++) {
 var base_num = ["7232", "370", "5", "2", '12345'];
 var fuck = function () {
     for (let i = 0; i < base_num.length; i++) {
-        let text = thousan
+        let text = thousands(base_num[i]);
 
         ds(base_num[i]);
         $('.roll_number').eq(i).leoTextAnimate('reload', {text: text});
