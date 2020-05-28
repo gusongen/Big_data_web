@@ -575,7 +575,7 @@ var fuck = function () {
     for (let i = 0; i < base_num.length; i++) {
         let text = thousands(base_num[i]);
 
-        ds(base_num[i]);
+       // ds(base_num[i]);
         $('.roll_number').eq(i).leoTextAnimate('reload', {text: text});
     }
 };
