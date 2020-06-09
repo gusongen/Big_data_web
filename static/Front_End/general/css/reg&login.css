@@ -25,7 +25,7 @@ form select {
 
 body {
     background: url('../img/reg_bg.png');
-    background-size: 100%;
+    background-size: cover;
 }
 
 #headbox {
