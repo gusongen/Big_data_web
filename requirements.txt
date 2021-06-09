@@ -26,7 +26,7 @@ cycler==0.10.0
 dataset==1.1.2
 decorator==4.4.0
 defusedxml==0.6.0
-Django==2.2.3
+Django==2.2.22
 dlib==19.17.0
 docker==3.7.0
 docker-pycreds==0.4.0
